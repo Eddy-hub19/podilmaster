@@ -1,47 +1,49 @@
-# name: Build and deploy to GitHub Pages
-
-# on:
-#   push:
-#     branches: [main]
-
-# jobs:
-#   build-and-deploy:
-#     runs-on: ubuntu-latest
-#     steps:
-
-#       - name: Install and Build 🔧
-#         run: |
-#           npm ci
-#           npm run build
-
-#       - name: Deploy 🚀
-#         uses: JamesIves/github-pages-deploy-action@4.1.0
-#         with:
-#           branch: gh-pages
-#           folder: dist
-
 name: Build and deploy to GitHub Pages
 
 on:
   push:
-    branches: [main]  # Запускать при пуше в ветку main
+    branches: [main]
 
 jobs:
   build-and-deploy:
-    runs-on: ubuntu-latest  # Используем Ubuntu для выполнения действий
+    runs-on: ubuntu-latest
     steps:
-      
-      # Шаг для установки зависимостей и сборки проекта
+
       - name: Checkout 🛎️
 
       - name: Install and Build 🔧
         run: |
-          npm ci  # Установка зависимостей с использованием package-lock.json
-          npm run build  # Сборка проекта (обычно результат в папке dist)
+          npm ci
+          npm run build
 
-      # Шаг для деплоя на GitHub Pages
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.0
         with:
-          branch: gh-pages  # Ветка для деплоя
-          folder: dist  # Папка, которая будет деплоиться
+          branch: gh-pages
+          folder: dist
+
+# name: Build and deploy to GitHub Pages
+
+# on:
+#   push:
+#     branches: [main]  # Запускать при пуше в ветку main
+
+# jobs:
+#   build-and-deploy:
+#     runs-on: ubuntu-latest  # Используем Ubuntu для выполнения действий
+#     steps:
+      
+#       # Шаг для установки зависимостей и сборки проекта
+#       - name: Checkout 🛎️
+
+#       - name: Install and Build 🔧
+#         run: |
+#           npm ci  # Установка зависимостей с использованием package-lock.json
+#           npm run build  # Сборка проекта (обычно результат в папке dist)
+
+#       # Шаг для деплоя на GitHub Pages
+#       - name: Deploy 🚀
+#         uses: JamesIves/github-pages-deploy-action@4.1.0
+#         with:
+#           branch: gh-pages  # Ветка для деплоя
+#           folder: dist  # Папка, которая будет деплоиться
