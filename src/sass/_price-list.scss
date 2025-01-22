@@ -11,6 +11,11 @@
     letter-spacing: 0.55px;
     text-transform: uppercase;
     margin-right: 20px;
+
+    @include mobile {
+      font-size: 32px;
+      margin-right: 20px;
+    }
   }
 
   &-table {
@@ -22,6 +27,13 @@
     border: 1px solid $primary-color;
     position: relative;
 
+    @include mobile {
+      padding: 25px 0;
+      display: flex;
+      position: relative;
+      flex-direction: column;
+    }
+
     &::after {
       content: "";
       position: absolute;
@@ -30,6 +42,10 @@
       background: #d8d8d8;
       top: 0;
       left: 50%;
+
+      @include mobile {
+        display: none;
+      }
     }
 
     .price-list-column {
@@ -43,6 +59,13 @@
           margin: 6px 0 21px 0;
           border-bottom: 1px solid $border-color;
 
+          @include mobile {
+            margin: 13px 0;
+            // padding: 21px 0;
+            display: flex;
+            align-items: center;
+          }
+
           .service-name {
             color: $primary-color;
             font-family: $manrope;
@@ -51,6 +74,11 @@
             font-weight: 600;
             line-height: normal;
             padding-left: 57px;
+
+            @include mobile {
+              font-size: 16px;
+              padding-left: 15;
+            }
           }
 
           .price {
@@ -62,6 +90,14 @@
             font-weight: 400;
             line-height: normal;
             padding-right: 57px;
+
+            @include mobile {
+              font-size: 24px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: normal;
+              padding-right: 15px;
+            }
           }
         }
       }
