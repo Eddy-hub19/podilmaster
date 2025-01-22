@@ -1,0 +1,176 @@
+// Hero Content
+
+.hero-content {
+  @include desktop {
+    display: flex;
+    align-items: center;
+  }
+
+  @include tablet {
+    display: flex;
+    flex-direction: column;
+  }
+
+  @include mobile {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .border {
+    @include mobile {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+
+  .mobile-hero-info {
+    display: none;
+    @include mobile {
+      margin-top: 20px;
+      margin-bottom: 30px;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  .content-left {
+    @include desktop {
+      padding-right: 56px;
+    }
+  }
+
+  .hero-img {
+    @include desktop {
+      position: relative;
+      top: -90px;
+      z-index: -1;
+    }
+
+    @include mobile {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .hero-title,
+  .hero-call {
+    font-family: $psytype;
+    font-style: normal;
+    font-weight: 400;
+    text-transform: uppercase;
+
+    span {
+      color: $accent-color;
+    }
+  }
+
+  .hero-title {
+    font-size: 115px;
+    line-height: 100%;
+    letter-spacing: 1.15px;
+    word-break: break-word;
+
+    @include tablet {
+      color: #323340;
+      font-size: 55px;
+      line-height: 1;
+      letter-spacing: 0.55px;
+    }
+
+    @include mobile {
+      color: #323340;
+      font-size: 50px;
+      line-height: 1;
+      letter-spacing: 0.55px;
+      margin-top: 30px;
+    }
+
+    .hero-title-span {
+      margin-right: 15px;
+
+      @include mobile {
+        margin-right: 5px;
+      }
+    }
+  }
+
+  .hero-call {
+    @include desktop {
+      position: relative;
+      margin-top: 32px;
+      color: $accent-color;
+      font-size: 32px;
+      line-height: 1;
+      letter-spacing: 0.32px;
+    }
+
+    @include mobile {
+      color: #3475ff;
+      font-family: PsyType;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 100%;
+      letter-spacing: 0.24px;
+      text-transform: uppercase;
+    }
+  }
+
+  .hero-descr {
+    margin-top: 32px;
+    color: $primary-color;
+    font-family: $manrope;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+    @include mobile {
+      margin-top: 0px;
+    }
+  }
+
+  .common-issues-align {
+    display: flex;
+    align-items: center;
+  }
+
+
+  // HERO - contanct number
+  
+  .contact-number {
+    color: #323340;
+    font-family: Manrope;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    gap: 10px;
+
+    @include mobile {
+      margin-top: 7px;
+    }
+  }
+
+  .contact-name {
+    color: #323340;
+    font-family: Manrope;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    gap: 10px;
+  }
+}
+
+.descktop-hero-descr {
+  @include mobile {
+    display: none;
+  }
+}
+
+.mobile-hero-descr {
+  @include desktop {
+    display: none;
+  }
+}

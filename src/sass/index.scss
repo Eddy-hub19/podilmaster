@@ -1,2 +1,87 @@
-@import './common';
-@import './example';
+@import "./mixins";
+@import "./common";
+@import "./variables";
+@import "./header";
+@import "./hero";
+@import "./popup";
+@import "./common-issues";
+@import "./issues-causes";
+@import "./drain-issues";
+@import "./washer-troubleshooting";
+@import "./machine-noise-problem";
+@import "./price-list";
+@import "./footer";
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+.section {
+  padding-top: 120px;
+
+  @include mobile {
+    padding-top: 60px;
+  }
+}
+
+button {
+  cursor: pointer;
+}
+
+.mg-top30 {
+  margin-top: 30px;
+}
+
+.header {
+  background: #dadfdb22;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 24px 20px;
+  text-align: center;
+}
+
+.flex {
+  display: flex;
+}
+
+.descr {
+  color: $primary-color;
+  font-family: $manrope;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+.main {
+  flex: 1;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.border {
+  width: 603px;
+  height: 1px;
+  background: $accent-color;
+}
+
+.dis-non-mobile {
+  @include mobile {
+    display: none;
+  }
+}
+.dis-non-desktop {
+  @include desktop {
+    display: none;
+  }
+}

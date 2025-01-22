@@ -1,0 +1,38 @@
+.machine-noise-problem-title {
+  color: $primary-color;
+
+  /* H2 */
+  font-family: $psytype;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0.32px;
+  text-transform: uppercase;
+}
+
+.machine-noise-problem-descr {
+  color: $primary-color;
+
+  /* Body 2 */
+  font-family: $manrope;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.machine-noise-problem-list {
+  display: flex;
+  gap: 48px;
+}
+
+.machine-noise-problem-content {
+  padding: 30px;
+}
+
+.machine-noise-problem-wrap {
+  border-radius: 35px;
+  width: 349px;
+  background: white;
+}

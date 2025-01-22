@@ -1,0 +1,46 @@
+.common-issues {
+  .common-issues-title,
+  .common-issues-descr {
+    color: $primary-color;
+    font-style: normal;
+    font-weight: 400;
+  }
+
+  .common-issues-title {
+    font-family: $psytype;
+    font-size: 54px;
+    line-height: 1;
+    letter-spacing: 0.55px;
+    text-transform: uppercase;
+    word-break: break-all;
+
+    @include mobile {
+      font-size: 32px;
+      letter-spacing: 0.32px;
+      word-wrap: break-word;
+    }
+  }
+
+  .common-issues-descr {
+    font-family: $manrope;
+    font-size: 16px;
+    line-height: normal;
+  }
+
+  .border2 {
+    width: 697px;
+    height: 1px;
+    background: #3475ff;
+    margin-left: 20px;
+
+    @include mobile {
+      width: 100%;
+      margin-top: 20px;
+    }
+  }
+
+  .common-issues-m-img {
+    width: 100%;
+    margin-top: 20px;
+  }
+}

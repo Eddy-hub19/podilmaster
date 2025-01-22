@@ -1,0 +1,132 @@
+// issues-causes
+
+.issues-causes-subtitle {
+  color: $primary-color;
+
+  /* H2 */
+  font-family: $psytype;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0.32px;
+  text-transform: uppercase;
+}
+
+.issues-causes-descr {
+  color: $primary-color;
+  font-family: $manrope;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.issues-causes-list {
+  display: flex;
+  gap: 48px;
+}
+
+.item {
+  width: 407px;
+  min-height: 410px;
+  flex-shrink: 0;
+  border-radius: 55px;
+  background: #f7f7f7;
+  border-radius: 55px;
+  // border: 1px solid $accent-color;
+  // border-right: none;
+  // border-left: none;
+  // border-bottom-width: 4px;
+}
+
+.item-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  // gap: 30px;
+  padding: 30px 30px;
+  position: relative;
+
+  .number {
+    /* H1 */
+    color: $accent-color;
+    font-family: $psytype;
+    font-size: 55px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: 0.55px;
+    text-transform: uppercase;
+    padding-left: 30px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 77px;
+      height: 77px;
+      top: 20px;
+      left: 30px;
+      border-radius: 50%;
+      border: 1px solid $accent-color;
+      background-color: transparent;
+      flex-shrink: 0;
+    }
+  }
+}
+
+.item-content-title {
+  color: $primary-color;
+  font-family: $manrope;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.item-content-descr {
+  color: $primary-color;
+  font-family: $manrope;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 15px;
+}
+
+.border3 {
+  width: 347px;
+  height: 1px;
+  background: $accent-color;
+  gap: 30px;
+}
+
+.cart {
+  position: relative;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cart::before,
+.cart::after {
+  content: "";
+  position: absolute;
+  width: 155px;
+  height: 155px;
+}
+
+.cart::before {
+  top: 0;
+  left: 0;
+  border-right: none;
+  border-bottom: none;
+  border-top-left-radius: 55px;
+  box-shadow: -1px -1px 0.5px #007bff;
+}
+
+.cart::after {
+  bottom: 0;
+  right: 0;
+  border-left: none;
+  border-top: none;
+  border-bottom-right-radius: 55px;
+  box-shadow: 1px 1px 1px #007bff;
+}

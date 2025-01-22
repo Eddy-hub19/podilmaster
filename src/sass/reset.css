@@ -1,0 +1,185 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  color: inherit; /* Наследует цвет текста от родителя */
+  text-decoration: none; /* Убирает подчеркивание */
+  cursor: pointer; /* Указывает, что элемент кликабельный */
+}
+
+a:hover {
+  text-decoration: underline; /* Подчеркивание при наведении */
+}
+
+a:focus {
+  outline: 2px dashed #005fcc; /* Обводка для доступности */
+  outline-offset: 2px;
+}
+
+/* a:visited {
+  color: #551a8b;
+  color: #901f7d;
+} */
+
+a:active {
+  color: #d00; /* Цвет при клике */
+}
+
+svg {
+  display: inline-block; /* Отображение SVG как встроенного элемента */
+  width: 100%; /* Подгонка под контейнер */
+  height: auto; /* Сохранение пропорций */
+  fill: none; /* Убирает заливку по умолчанию */
+  stroke: none; /* Убирает обводку по умолчанию */
+  vertical-align: middle; /* Выравнивание по базовой линии текста */
+}
+
+button,
+input[type='button'],
+input[type='submit'] {
+  all: unset; /* Сбрасывает все стили элемента */
+  display: inline-block; /* Устанавливает блочное поведение */
+  text-align: center; /* Центрирует текст */
+  padding: 0; /* Убирает внутренние отступы */
+  margin: 0; /* Убирает внешние отступы */
+  font: inherit; /* Наследует шрифт родителя */
+  color: inherit; /* Наследует цвет текста */
+  background: none; /* Убирает фон */
+  border: none; /* Убирает рамки */
+  cursor: pointer; /* Устанавливает указатель */
+  line-height: normal; /* Убирает возможные особенности межстрочного интервала */
+}
+
+button:focus-visible,
+input[type='button']:focus-visible,
+input[type='submit']:focus-visible {
+  outline: 2px solid #007bff; /* Добавляем видимый фокус */
+  outline-offset: 2px; /* Сдвигаем отступ фокуса */
+}
