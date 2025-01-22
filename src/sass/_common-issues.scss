@@ -17,7 +17,7 @@
     @include mobile {
       font-size: 32px;
       letter-spacing: 0.32px;
-      word-wrap: break-word;
+      word-break: break-word;
     }
   }
 
@@ -25,6 +25,15 @@
     font-family: $manrope;
     font-size: 16px;
     line-height: normal;
+  }
+
+  .common-issues-align {
+    display: flex;
+    align-items: center;
+
+    @include mobile {
+      flex-direction: column;
+    }
   }
 
   .border2 {
@@ -36,6 +45,7 @@
     @include mobile {
       width: 100%;
       margin-top: 20px;
+      margin-left: 0;
     }
   }
 

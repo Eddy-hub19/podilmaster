@@ -8,6 +8,12 @@
     line-height: 1;
     letter-spacing: 0.32px;
     text-transform: uppercase;
+
+    @include mobile {
+      font-size: 24px;
+      letter-spacing: 0.24px;
+      word-break: auto-phrase;
+    }
   }
 
   .section-description {
@@ -30,6 +36,11 @@
       align-items: center;
       gap: 20px;
 
+      @include mobile {
+        align-items: flex-start;
+        gap: 10px;
+      }
+
       .issue-number {
         display: flex;
         align-items: center;
@@ -42,11 +53,16 @@
         color: $accent-color;
         font-family: $psytype;
         font-size: 55px;
-        font-style: normal;
         font-weight: 400;
         line-height: 1;
         letter-spacing: 0.55px;
         text-transform: uppercase;
+
+        @include mobile {
+          width: 51px;
+          height: 51px;
+          font-size: 32px;
+        }
       }
 
       .issue-content {
@@ -57,7 +73,6 @@
           color: $primary-color;
           font-family: $manrope;
           font-size: 16px;
-          font-style: normal;
           font-weight: 600;
           line-height: normal;
         }
@@ -66,7 +81,6 @@
           color: $primary-color;
           font-family: $manrope;
           font-size: 16px;
-          font-style: normal;
           font-weight: 400;
           line-height: normal;
         }

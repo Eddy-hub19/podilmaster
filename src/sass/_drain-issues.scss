@@ -1,4 +1,12 @@
 .drain-issues {
+  .mg-top30 {
+    @include mobile {
+      margin-top: 20px;
+    }
+  }
+}
+
+.drain-issues {
   .drain-issues-title,
   .drain-issues-info-descr {
     color: $primary-color;
@@ -27,6 +35,7 @@
     @include mobile {
       flex-direction: column-reverse;
       align-content: center;
+      gap: 20px;
     }
   }
 
@@ -35,6 +44,10 @@
     flex-direction: column;
     align-items: center;
     margin-top: 32px;
+
+    @include mobile {
+      margin-top: 20px;
+    }
 
     .drain-issues-info-descr {
       font-family: $manrope;
