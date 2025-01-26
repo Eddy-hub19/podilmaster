@@ -1,0 +1,138 @@
+// Общие стили для слайдов
+.item {
+  width: auto;
+  height: auto;
+  flex-shrink: 0;
+  border-radius: 55px;
+  background: #f7f7f7 !important;
+
+  @include desktop {
+    width: 407px !important;
+    min-height: 410px !important;
+  }
+}
+
+// Контейнер для слайдера
+.swiper-container {
+  position: relative;
+  width: 100%;
+  display: block;
+
+  @include mobile;
+  @include tablet {
+    margin-bottom: 60px;
+  }
+}
+
+// Стили для обёртки и слайдов
+@include desktop {
+  .swiper-wrapper {
+    gap: 48px;
+  }
+
+  .swiper-slide {
+    flex-shrink: 1;
+  }
+
+  .swiper-pagination,
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none !important;
+  }
+}
+
+// Пагинация (общие стили)
+.swiper-pagination {
+  position: absolute;
+  bottom: -24px !important;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+
+  .swiper-pagination-bullet {
+    width: 6px;
+    height: 6px;
+    background-color: gray;
+    border-radius: 50%;
+    opacity: 0.5;
+    transition:
+      background-color 0.3s,
+      opacity 0.3s;
+
+    &-active {
+      width: 19px;
+      height: 6px;
+      border-radius: 15px;
+      background: var(--2, #3475ff);
+      opacity: 1;
+    }
+  }
+}
+
+// Стрелки для переключения слайдов
+.swiper-button-prev,
+.swiper-button-next {
+  position: absolute;
+  top: 110%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 24px;
+  height: 24px;
+  border: 2px solid #3475ff;
+  border-radius: 50%;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #3475ff;
+  cursor: pointer;
+
+  &::after {
+    font-size: 16px;
+  }
+
+  &.swiper-button-prev {
+    left: 80px;
+  }
+
+  &.swiper-button-next {
+    right: 80px;
+  }
+}
+
+// Кастомизация для конкретных слайдеров
+#slider1 .swiper-button-prev,
+#slider1 .swiper-button-next,
+#slider2 .swiper-button-prev,
+#slider2 .swiper-button-next {
+  color: #007bff;
+}
+
+// Стили для карточки
+.cart {
+  position: relative;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 12%;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 155px;
+    height: 155px;
+  }
+
+  &::before {
+    top: 0;
+    left: 0;
+    border-top-left-radius: 55px;
+    box-shadow: -1px -1px 0.5px #007bff;
+  }
+
+  &::after {
+    bottom: 0;
+    right: 0;
+    border-bottom-right-radius: 55px;
+    box-shadow: 1px 1px 1px #007bff;
+  }
+}

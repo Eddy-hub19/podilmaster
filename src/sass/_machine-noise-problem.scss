@@ -1,7 +1,5 @@
 .machine-noise-problem-title {
   color: $primary-color;
-
-  /* H2 */
   font-family: $psytype;
   font-size: 32px;
   font-style: normal;
@@ -9,12 +7,14 @@
   line-height: 1;
   letter-spacing: 0.32px;
   text-transform: uppercase;
+
+  @include mobile {
+    font-size: 32px;
+  }
 }
 
 .machine-noise-problem-descr {
   color: $primary-color;
-
-  /* Body 2 */
   font-family: $manrope;
   font-size: 16px;
   font-style: normal;
@@ -28,11 +28,23 @@
 }
 
 .machine-noise-problem-content {
-  padding: 30px;
+  @include desktop {
+    padding: 30px;
+  }
+
+  @include mobile {
+    padding: 0 !important;
+  }
 }
 
 .machine-noise-problem-wrap {
+  width: auto !important;
+  max-width: 100%;
+  min-width: auto;
   border-radius: 35px;
-  width: 349px;
   background: white;
+
+  @include desktop {
+    max-width: 349px;
+  }
 }

@@ -37,6 +37,11 @@
       align-content: center;
       gap: 20px;
     }
+    @include tablet {
+      flex-direction: column-reverse;
+      align-content: center;
+      gap: 20px;
+    }
   }
 
   .drain-issues-info {

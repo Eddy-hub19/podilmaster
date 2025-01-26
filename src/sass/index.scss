@@ -1,5 +1,6 @@
 @import "./mixins";
 @import "./common";
+@import "./swiper";
 @import "./variables";
 @import "./header";
 @import "./hero";
@@ -83,5 +84,11 @@ body {
 .dis-non-desktop {
   @include desktop {
     display: none;
+  }
+}
+
+img {
+  @include mobile {
+    max-width: 100%;
   }
 }

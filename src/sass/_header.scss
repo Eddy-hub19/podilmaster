@@ -86,7 +86,7 @@
 
 // hamberger
 .hamburger {
-  cursor: pointer;
+  cursor: pointer !important;
 
   @include mobile {
     width: 30px;
@@ -232,7 +232,7 @@
   position: absolute;
   top: 20px;
   right: 20px;
-  cursor: pointer !important;
+  cursor: pointer;
 
   @include mobile {
     display: none;
