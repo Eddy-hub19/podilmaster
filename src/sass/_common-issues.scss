@@ -39,7 +39,7 @@
   .border2 {
     width: 697px;
     height: 1px;
-    background: #3475ff;
+    background: $accent-color;
     margin-left: 20px;
 
     @include mobile {

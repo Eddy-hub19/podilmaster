@@ -1,0 +1,52 @@
+#elements-list-1,#elements-list-2 {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-top: 30px;
+
+  .element {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    position: relative;
+    margin-bottom: 16px;
+    padding: 15px 0;
+
+    .element-number {
+      color: $accent-color;
+      font-family: $psytype;
+      font-size: 55px;
+      line-height: 1;
+      letter-spacing: 0.55px;
+      text-transform: uppercase;
+      padding-left: 30px;
+      position: relative;
+
+      @include mobile {
+        font-size: 40px;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 71px;
+        height: 71px;
+        top: -10px;
+        left: 0px;
+        border-radius: 50%;
+        border: 1px solid $accent-color;
+
+        @include mobile {
+          top: 10px;
+          left: 30px;
+          width: 52px;
+          height: 52px;
+        }
+      }
+    }
+
+    .element-text {
+      margin-left: 20px;
+    }
+  }
+}

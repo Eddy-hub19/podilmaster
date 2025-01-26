@@ -1,24 +1,23 @@
-if (window.matchMedia('(min-width: 1440px)').matches) {
-  const hamburger = document.querySelector('.hamburger');
-  const menu = document.querySelector('.menu');
-  const closeMenu = document.querySelector('.cross-desctop');
-  const overlay = document.querySelector('.overlay');
+document.addEventListener('DOMContentLoaded', () => {
+  if (window.matchMedia('(min-width: 1440px)').matches) {
+    const hamburger = document.querySelector('.hamburger');
+    const menu = document.querySelector('.menu');
+    const closeMenu = document.querySelector('.cross-desctop');
+    const overlay = document.querySelector('.overlay');
 
-  // Открытие меню
-  hamburger.addEventListener('click', () => {
-    menu.classList.toggle('open');
-    overlay.style.display = overlay.style.display === 'block' ? 'none' : 'block';
-  });
+    // Функция для переключения меню и оверлея
+    const toggleMenu = (isOpen) => {
+      menu.classList.toggle('open', isOpen);
+      overlay.style.display = isOpen ? 'block' : 'none';
+    };
 
-  // Закрытие меню по клику на крестик
-  closeMenu.addEventListener('click', () => {
-    menu.classList.remove('open');
-    overlay.style.display = 'none';
-  });
+    // Открытие меню
+    hamburger.addEventListener('click', () => toggleMenu(true));
 
-  // Закрытие меню по клику на оверлей
-  overlay.addEventListener('click', () => {
-    menu.classList.remove('open');
-    overlay.style.display = 'none';
-  });
-}
+    // Закрытие меню по клику на крестик
+    closeMenu.addEventListener('click', () => toggleMenu(false));
+
+    // Закрытие меню по клику на оверлей
+    overlay.addEventListener('click', () => toggleMenu(false));
+  }
+});

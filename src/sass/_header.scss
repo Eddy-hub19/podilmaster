@@ -8,7 +8,7 @@
     margin-left: auto;
 
     .social-link {
-      color: #323340;
+      color: $primary-color;
       font-family: Manrope;
       font-size: 16px;
       font-style: normal;
@@ -51,7 +51,7 @@
 
   .phone-number,
   .name {
-    color: #323340;
+    color: $primary-color;
     font-family: $manrope;
     font-size: 16px;
     font-style: normal;
@@ -277,7 +277,7 @@
       display: flex;
       align-content: center;
 
-      color: #323340;
+      color: $primary-color;
       font-family: Manrope;
       font-size: 16px;
       font-style: normal;
@@ -294,7 +294,7 @@
 }
 
 .social-link {
-  color: #323340;
+  color: $primary-color;
   font-family: Manrope;
   font-size: 16px;
   font-style: normal;

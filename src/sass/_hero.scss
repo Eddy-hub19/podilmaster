@@ -71,14 +71,14 @@
     word-break: break-word;
 
     @include tablet {
-      color: #323340;
+      color: $primary-color;
       font-size: 55px;
       line-height: 1;
       letter-spacing: 0.55px;
     }
 
     @include mobile {
-      color: #323340;
+      color: $primary-color;
       font-size: 50px;
       line-height: 1;
       letter-spacing: 0.55px;
@@ -105,7 +105,7 @@
     }
 
     @include mobile {
-      color: #3475ff;
+      color: $accent-color;
       font-family: PsyType;
       font-size: 24px;
       font-style: normal;
@@ -134,7 +134,7 @@
   // HERO - contanct number
   
   .contact-number {
-    color: #323340;
+    color: $primary-color;
     font-family: Manrope;
     font-size: 16px;
     font-style: normal;
@@ -148,7 +148,7 @@
   }
 
   .contact-name {
-    color: #323340;
+    color: $primary-color;
     font-family: Manrope;
     font-size: 16px;
     font-style: normal;

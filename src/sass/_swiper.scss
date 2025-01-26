@@ -63,7 +63,7 @@
       width: 19px;
       height: 6px;
       border-radius: 15px;
-      background: var(--2, #3475ff);
+      background: var(--2, $accent-color);
       opacity: 1;
     }
   }
@@ -78,13 +78,13 @@
   z-index: 10;
   width: 24px;
   height: 24px;
-  border: 2px solid #3475ff;
+  border: 2px solid $accent-color;
   border-radius: 50%;
   background: transparent;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #3475ff;
+  color: $accent-color;
   cursor: pointer;
 
   &::after {
@@ -105,7 +105,7 @@
 #slider1 .swiper-button-next,
 #slider2 .swiper-button-prev,
 #slider2 .swiper-button-next {
-  color: #007bff;
+  color: $secondary-color;
 }
 
 // Стили для карточки
@@ -126,13 +126,13 @@
     top: 0;
     left: 0;
     border-top-left-radius: 55px;
-    box-shadow: -1px -1px 0.5px #007bff;
+    box-shadow: -1px -1px 0.5px $secondary-color;
   }
 
   &::after {
     bottom: 0;
     right: 0;
     border-bottom-right-radius: 55px;
-    box-shadow: 1px 1px 1px #007bff;
+    box-shadow: 1px 1px 1px $secondary-color;
   }
 }
