@@ -1,4 +1,5 @@
-#elements-list-1,#elements-list-2 {
+#elements-list-1,
+#elements-list-2 {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -23,7 +24,8 @@
       position: relative;
 
       @include mobile {
-        font-size: 40px;
+        font-size: 32px;
+        letter-spacing: 0.32px;
       }
 
       &::before {
@@ -37,10 +39,10 @@
         border: 1px solid $accent-color;
 
         @include mobile {
-          top: 10px;
-          left: 30px;
-          width: 52px;
-          height: 52px;
+          width: 51px;
+          height: 51px;
+          top: -10px;
+          left: 10px;
         }
       }
     }

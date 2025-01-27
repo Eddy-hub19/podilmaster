@@ -2,13 +2,19 @@
 .item {
   width: auto;
   height: auto;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
   flex-shrink: 0;
   border-radius: 55px;
   background: #f7f7f7 !important;
 
   @include desktop {
-    width: 407px !important;
-    min-height: 410px !important;
+    width: 100%;
+    min-height: 100%;
+    // width: 407px;
+    // min-height: 410px;
   }
 }
 
@@ -27,6 +33,7 @@
 // Стили для обёртки и слайдов
 @include desktop {
   .swiper-wrapper {
+    display: flex;
     gap: 48px;
   }
 
@@ -104,7 +111,9 @@
 #slider1 .swiper-button-prev,
 #slider1 .swiper-button-next,
 #slider2 .swiper-button-prev,
-#slider2 .swiper-button-next {
+#slider2 .swiper-button-next,
+#slider3 .swiper-button-prev,
+#slider3 .swiper-button-next {
   color: $secondary-color;
 }
 

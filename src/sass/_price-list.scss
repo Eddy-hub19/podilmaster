@@ -3,6 +3,7 @@
 
   .border {
     width: 100%;
+    
     @include mobile {
       margin-top: 20px;
       width: 100%;

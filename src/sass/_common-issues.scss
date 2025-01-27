@@ -19,6 +19,12 @@
       letter-spacing: 0.32px;
       word-break: break-word;
     }
+
+    @include tablet {
+      font-size: 32px;
+      letter-spacing: 0.32px;
+      word-break: break-word;
+    }
   }
 
   .common-issues-descr {
@@ -34,6 +40,9 @@
     @include mobile {
       flex-direction: column;
     }
+    @include tablet {
+      flex-direction: column;
+    }
   }
 
   .border2 {
@@ -43,6 +52,12 @@
     margin-left: 20px;
 
     @include mobile {
+      width: 100%;
+      margin-top: 20px;
+      margin-left: 0;
+    }
+
+    @include tablet {
       width: 100%;
       margin-top: 20px;
       margin-left: 0;

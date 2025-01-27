@@ -1,0 +1,17 @@
+#reliable-installatio {
+  .list {
+    gap: 49px;
+    justify-content: space-between;
+    align-items: center;
+
+    .item {
+      width: 293px;
+      min-height: auto;
+      padding: 30px;
+
+      @include mobile {
+        width: 100%;
+      }
+    }
+  }
+}

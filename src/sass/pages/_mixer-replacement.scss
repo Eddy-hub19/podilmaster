@@ -1,0 +1,9 @@
+#mixer-replacement {
+  @include mobile {
+    margin-top: 120px;
+  }
+
+  @include tablet {
+    margin-top: 120px;
+  }
+}
