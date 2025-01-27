@@ -1,0 +1,15 @@
+#reach-out {
+  .title {
+    margin-right: 20px;
+  }
+
+  .border3 {
+    @include desktop {
+      width: 931px;
+    }
+
+    @include mobile {
+      width: 100%;
+    }
+  }
+}

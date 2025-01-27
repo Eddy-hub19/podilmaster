@@ -1,0 +1,25 @@
+#problem-solving {
+  .swiper-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 49px;
+    margin-top: 30px;
+
+    @include mobile {
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .swiper-slide {
+    width: calc((100% / 4) - 49px);
+
+    @include mobile {
+      width: calc((100% / 2) - 49px);
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+.dangers-of-self-solving {
+  .swiper-wrapper {
+    flex-wrap: wrap;
+    gap: 48px;
+  }
+
+  .swiper-slide {
+    width: calc((100% / 3 - 48px));
+
+    @include mobile {
+      width: calc((100% / 1));
+    }
+  }
+}

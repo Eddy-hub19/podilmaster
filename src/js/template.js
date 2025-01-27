@@ -21,4 +21,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
   initializeElementsFromHTML('elements-list-1');
   initializeElementsFromHTML('elements-list-2');
+  initializeElementsFromHTML('elements-list-3');
+  initializeElementsFromHTML('elements-list-4');
 });

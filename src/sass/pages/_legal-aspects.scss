@@ -1,0 +1,27 @@
+.legal-aspects {
+  .border3 {
+    @include desktop {
+      width: 699px;
+      margin-left: 20px;
+    }
+  }
+
+  .legal-aspects-wrap {
+    display: flex;
+    gap: 50px;
+
+    @include mobile{
+      flex-direction: column;
+    }
+  }
+
+  .wrap {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+
+    @include mobile{
+      flex-direction: column;
+    }
+  }
+}
