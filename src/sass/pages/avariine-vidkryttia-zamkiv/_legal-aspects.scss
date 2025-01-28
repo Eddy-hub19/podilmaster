@@ -1,8 +1,19 @@
 .legal-aspects {
+
+  .flex{
+    @include mobile{
+      display: block;
+    }
+  }
+
   .border3 {
     @include desktop {
       width: 699px;
       margin-left: 20px;
+    }
+
+    @include mobile{
+      margin-top: 20px;
     }
   }
 

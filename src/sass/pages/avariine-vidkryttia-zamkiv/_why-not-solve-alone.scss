@@ -1,4 +1,11 @@
 .why-not-solve-alone {
+  .border {
+    @include desktop {
+      width: 301px;
+      margin-left: 20px;
+    }
+  }
+
   .wrap {
     display: flex;
     gap: 60px;

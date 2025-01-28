@@ -1,14 +1,31 @@
 .dangers-of-self-solving {
+  .title {
+    position: relative;
+  }
+  .border {
+    width: 301px;
+    margin-left: 20px;
+  }
+
   .swiper-wrapper {
     flex-wrap: wrap;
     gap: 48px;
+
+    @include mobile{
+      flex-wrap: nowrap;
+      gap: 0;
+    }
   }
 
   .swiper-slide {
-    width: calc((100% / 3 - 48px));
+    @include desktop {
+      width: calc((100% / 3 - 48px));
+    }
 
     @include mobile {
-      width: calc((100% / 1));
+      width: 100%;
+      min-height: auto;
+      overflow: hidden;
     }
   }
 }

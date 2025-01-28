@@ -25,7 +25,9 @@
 
 .cladding-foam {
   .flex {
-    align-items: center;
+    @include desktop {
+      align-items: center;
+    }
   }
 
   .wrap {
@@ -33,6 +35,10 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+    }
+
+    @include mobile{
+      flex-direction: column;
     }
   }
 
@@ -52,14 +58,15 @@
 
 .siding-covering {
   .item {
+    min-height: 300px;
     @include desktop {
       width: 407px;
-      min-height: 300px;
       flex-shrink: 0;
     }
 
     @include mobile {
       width: 100%;
+      max-width: 100%;
     }
   }
 }

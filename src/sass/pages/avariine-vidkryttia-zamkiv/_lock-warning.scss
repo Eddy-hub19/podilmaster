@@ -1,9 +1,14 @@
 .lock-warning {
+  .border {
+    width: 376px;
+    margin-left: 20px;
+  }
+
   .list {
     display: flex;
     justify-content: space-between;
 
-    @include mobile{
+    @include mobile {
       flex-direction: column;
       align-items: flex-start;
     }

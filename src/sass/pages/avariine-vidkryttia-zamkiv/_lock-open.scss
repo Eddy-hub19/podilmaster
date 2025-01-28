@@ -1,19 +1,57 @@
 .lock-open {
+  .flex {
+    @include mobile {
+      display: block;
+    }
+
+    @include tablet {
+      display: block;
+    }
+  }
+
+  .border {
+    @include desktop {
+      width: 877px;
+      margin-left: 20px;
+    }
+
+    @include mobile {
+      margin-top: 20px;
+    }
+
+    @include tablet {
+      margin-top: 20px;
+    }
+  }
+
   @include mobile {
     margin-top: 120px;
   }
 
-  .list {
+  .wrap-list {
     display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    padding: 0;
-    list-style-type: none;
-  }
+    align-items: center;
+    justify-content: space-between;
 
-  .element {
-    width: calc(50% - 10px);
-    padding: 10px;
-    border-radius: 5px;
+    #elements-list-1,
+    #elements-list-2,
+    #elements-list-3,
+    #elements-list-4 {
+      margin: 0;
+    }
+
+    @include mobile {
+      flex-direction: column;
+    }
+
+    @include tablet {
+      flex-direction: column;
+    }
+
+    .list {
+      @include desktop {
+        width: 50%;
+      }
+    }
   }
 }

@@ -2,6 +2,7 @@ let swiper1 = null;
 let swiper2 = null;
 let swiper3 = null;
 let swiper4 = null;
+let swiper5 = null;
 let swiper6 = null;
 let swiper7 = null;
 let swiper8 = null;

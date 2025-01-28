@@ -1,4 +1,16 @@
 #reliable-installatio {
+  .swiper {
+    @include tablet {
+      overflow: visible;
+    }
+  }
+
+  .subtitle {
+    @include tablet {
+      margin-top: 60px;
+    }
+  }
+
   .list {
     gap: 49px;
     justify-content: space-between;
@@ -9,7 +21,8 @@
       min-height: auto;
       padding: 30px;
 
-      @include mobile {
+      @include mobile;
+      @include tablet {
         width: 100%;
       }
     }
