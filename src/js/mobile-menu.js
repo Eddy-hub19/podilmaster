@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  if (window.matchMedia('(max-width: 375px)').matches) {
+  if (window.matchMedia('(max-width: 768px)').matches) {
     const hamburger = document.querySelector('.hamburger');
     const menu = document.querySelector('.menu');
     const closeMenu = document.querySelector('.cross-mobile');

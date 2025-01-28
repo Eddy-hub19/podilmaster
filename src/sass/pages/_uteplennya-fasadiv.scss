@@ -1,0 +1,90 @@
+// uteplennya-fasadiv page
+
+.heat-home {
+  .border3 {
+    @include desktop {
+      margin-left: 20px;
+      width: 727px;
+    }
+  }
+}
+
+.facade-materials {
+  .swiper-slide {
+    @include desktop {
+      width: 407px;
+      min-height: 344px;
+      flex-shrink: 0;
+    }
+
+    @include mobile {
+      width: 100%;
+    }
+  }
+}
+
+.cladding-foam {
+  .flex {
+    align-items: center;
+  }
+
+  .wrap {
+    @include desktop {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  .swiper-slide {
+    @include desktop {
+      width: 293px;
+      min-height: 300px;
+    }
+  }
+
+  .list {
+    @include desktop {
+      width: 50%;
+    }
+  }
+}
+
+.siding-covering {
+  .item {
+    @include desktop {
+      width: 407px;
+      min-height: 300px;
+      flex-shrink: 0;
+    }
+
+    @include mobile {
+      width: 100%;
+    }
+  }
+}
+
+.order-facade {
+  .border {
+    @include desktop {
+      width: 475px;
+      margin-left: 20px;
+    }
+  }
+
+  .wrap {
+    display: flex;
+
+    @include desktop {
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 30px;
+      gap: 48px;
+    }
+
+    @include mobile {
+      flex-direction: column;
+      align-content: center;
+    }
+  }
+}

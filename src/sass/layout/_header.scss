@@ -194,6 +194,11 @@
     padding: 0 16px;
   }
 
+  @include tablet {
+    margin: 0;
+    padding: 0 16px;
+  }
+
   a {
     display: inline-block;
     margin-top: 15px;
@@ -263,6 +268,10 @@
   @include mobile {
     display: none;
   }
+
+  @include tablet {
+    display: none;
+  }
 }
 
 .cross-mobile {
@@ -296,10 +305,14 @@
     margin-top: 40px;
   }
 
+  @include tablet {
+    margin-top: 40px;
+  }
+
   .header-contacts__descr {
     gap: 10px;
 
-    @include mobile {
+    @include mobile; @include tablet {
       display: flex;
       align-content: center;
 
@@ -338,6 +351,11 @@
   height: 28px;
 
   @include mobile {
+    width: 24px;
+    height: 24px;
+  }
+
+  @include tablet {
     width: 24px;
     height: 24px;
   }

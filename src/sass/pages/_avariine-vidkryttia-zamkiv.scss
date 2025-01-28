@@ -1,7 +1,20 @@
+// avariine-vidkryttia
+
+@import "/src/sass/pages/avariine-vidkryttia-zamkiv/lock-open";
+@import "/src/sass/pages/avariine-vidkryttia-zamkiv/lock-open";
+@import "/src/sass/pages/avariine-vidkryttia-zamkiv/reach-out";
+@import "/src/sass/pages/avariine-vidkryttia-zamkiv/problem-solving";
+@import "/src/sass/pages/avariine-vidkryttia-zamkiv/legal-aspects";
+@import "/src/sass/pages/avariine-vidkryttia-zamkiv/lock-warning";
+@import "/src/sass/pages/avariine-vidkryttia-zamkiv/dangers-of-self-solving";
+@import "/src/sass/pages/avariine-vidkryttia-zamkiv/why-not-solve-alone";
+
 .avariine-vidkryttia-zamkiv {
   .hero-title {
-    width: 612px;
-    word-break: break-all;
+    @include desktop {
+      width: 612px;
+      word-break: break-all;
+    }
   }
 
   .hero-title-span {

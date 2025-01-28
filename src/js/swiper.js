@@ -2,7 +2,9 @@ let swiper1 = null;
 let swiper2 = null;
 let swiper3 = null;
 let swiper4 = null;
-let swiper5 = null;
+let swiper6 = null;
+let swiper7 = null;
+let swiper8 = null;
 
 function toggleSwiper() {
   const isMobile = window.innerWidth < 1024; // Условие для мобильных устройств и планшетов
@@ -13,7 +15,10 @@ function toggleSwiper() {
     { swiper: swiper2, id: '#slider2' },
     { swiper: swiper3, id: '#slider3' },
     { swiper: swiper4, id: '#slider4' },
-    { swiper: swiper5, id: '#slider5' }
+    { swiper: swiper5, id: '#slider5' },
+    { swiper: swiper6, id: '#slider6' },
+    { swiper: swiper7, id: '#slider7' },
+    { swiper: swiper8, id: '#slider8' },
   ];
 
   sliders.forEach(slider => {

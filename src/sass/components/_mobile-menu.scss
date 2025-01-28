@@ -1,0 +1,91 @@
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(55, 55, 71, 0.422);
+  z-index: 1;
+}
+
+.mobile-menu {
+  display: flex;
+  align-items: flex-start;
+}
+
+.phone-mobile {
+  margin-right: 20px;
+  cursor: pointer;
+
+  @include desktop {
+    display: none;
+  }
+}
+
+.cross-desctop {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+
+  @include mobile {
+    display: none;
+  }
+
+  @include tablet {
+    display: none;
+  }
+}
+
+.cross-mobile {
+  display: none;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+
+  @include mobile {
+    display: none;
+  }
+
+  @include desktop {
+    display: none;
+  }
+}
+
+.nav-mobile {
+  @include desktop {
+    display: none;
+  }
+}
+
+.header-contacts {
+  @include desktop {
+    display: none;
+  }
+  @include mobile {
+    margin-top: 40px;
+  }
+
+  .header-contacts__descr {
+    gap: 10px;
+
+    @include mobile {
+      display: flex;
+      align-content: center;
+
+      color: $primary-color;
+      font-family: $manrope;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+  }
+
+  .nav-mobile-wrap {
+    display: flex;
+    align-items: flex-start;
+    align-items: center;
+  }
+}

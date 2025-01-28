@@ -1,29 +1,37 @@
-@import "./mixins";
-@import "./variables";
-@import "./common";
-@import "./swiper";
-@import "./header";
-@import "./hero";
-@import "./popup";
-@import "./common-issues";
-@import "./issues-causes";
-@import "./drain-issues";
-@import "./washer-troubleshooting";
-@import "./machine-noise-problem";
-@import "./price-list";
-@import "./footer";
+// abstracts
+
+@import "./reset.css";
+
+@import "./abstracts/mixins";
+@import "./abstracts/variables";
+
+// base
+@import "./base/common";
+
+// components
+@import "./components/element";
+@import "./components/swiper";
+@import "./components/mobile-menu";
+@import "./components/popup";
+
+// layout
+@import "./layout/header";
+@import "./layout/footer";
+
+// remont-pralnykh-mashyn
+@import "./pages/remont-pralnykh-mashyn";
 
 // remont-santekhniky
 @import "./pages/remont-santekhniky";
 
+// avariine-vidkryttia-zamkiv
 @import "./pages/avariine-vidkryttia-zamkiv";
-@import "./pages/lock-open";
-@import "./pages/reach-out";
-@import "./pages/problem-solving";
-@import "./pages/legal-aspects";
-@import "./pages/lock-warning";
-@import "./pages/dangers-of-self-solving";
-@import "./pages/why-not-solve-alone";
+
+// uteplennya-fasadiv
+@import "./pages/uteplennya-fasadiv";
+
+// uteplennya-fasadiv
+@import "./pages/contacts";
 
 body {
   font-family: Arial, sans-serif;

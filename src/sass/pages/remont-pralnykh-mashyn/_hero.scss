@@ -6,12 +6,12 @@
     align-items: center;
   }
 
-  @include tablet {
+  @include mobile {
     display: flex;
     flex-direction: column;
   }
 
-  @include mobile {
+  @include tablet {
     display: flex;
     flex-direction: column;
   }
@@ -25,7 +25,8 @@
 
   .mobile-hero-info {
     display: none;
-    @include mobile {
+    @include mobile;
+    @include tablet {
       margin-top: 20px;
       margin-bottom: 30px;
       display: flex;
@@ -46,7 +47,8 @@
       z-index: -1;
     }
 
-    @include mobile {
+    @include mobile;
+    @include tablet {
       width: 100%;
       height: auto;
     }
@@ -70,13 +72,6 @@
     letter-spacing: 1.15px;
     word-break: break-word;
 
-    @include tablet {
-      color: $primary-color;
-      font-size: 55px;
-      line-height: 1;
-      letter-spacing: 0.55px;
-    }
-
     @include mobile {
       color: $primary-color;
       font-size: 50px;
@@ -85,10 +80,18 @@
       margin-top: 30px;
     }
 
+    @include tablet {
+      color: $primary-color;
+      font-size: 55px;
+      line-height: 1;
+      letter-spacing: 0.55px;
+    }
+
     .hero-title-span {
       margin-right: 15px;
 
-      @include mobile {
+      @include mobile;
+      @include tablet {
         margin-right: 5px;
       }
     }
@@ -104,7 +107,8 @@
       letter-spacing: 0.32px;
     }
 
-    @include mobile {
+    @include mobile;
+    @include tablet {
       color: $accent-color;
       font-family: PsyType;
       font-size: 24px;
@@ -125,14 +129,14 @@
     font-weight: 400;
     line-height: normal;
 
-    @include mobile {
+    @include mobile;
+    @include tablet {
       margin-top: 0px;
     }
   }
 
-
   // HERO - contanct number
-  
+
   .contact-number {
     color: $primary-color;
     font-family: Manrope;
@@ -142,7 +146,8 @@
     line-height: normal;
     gap: 10px;
 
-    @include mobile {
+    @include mobile;
+    @include tablet {
       margin-top: 7px;
     }
   }
@@ -159,7 +164,8 @@
 }
 
 .descktop-hero-descr {
-  @include mobile {
+  @include mobile;
+  @include tablet {
     display: none;
   }
 }
