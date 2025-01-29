@@ -3,9 +3,9 @@
   top: 0;
   left: 0;
   width: 100%;
-  background: #fff; // Укажите фон, чтобы контент под хедером не просвечивал
-  z-index: 1000; // Установите высокий z-index, чтобы хедер был поверх других элементов
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); // Небольшая тень для отделения хедера
+  background: #fff;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 
   @include mobile {
     padding: 36px 0px !important;

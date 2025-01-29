@@ -11,7 +11,12 @@
     flex-wrap: wrap;
     gap: 48px;
 
-    @include mobile{
+    @include mobile {
+      flex-wrap: nowrap;
+      gap: 0;
+    }
+
+    @include tablet {
       flex-wrap: nowrap;
       gap: 0;
     }
@@ -23,6 +28,12 @@
     }
 
     @include mobile {
+      width: 100%;
+      min-height: auto;
+      overflow: hidden;
+    }
+
+    @include tablet {
       width: 100%;
       min-height: auto;
       overflow: hidden;

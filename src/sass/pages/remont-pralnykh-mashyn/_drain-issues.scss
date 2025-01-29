@@ -54,6 +54,10 @@
       margin-top: 20px;
     }
 
+    @include tablet {
+      margin-top: 20px;
+    }
+
     .drain-issues-info-descr {
       font-family: $manrope;
       font-size: 16px;
