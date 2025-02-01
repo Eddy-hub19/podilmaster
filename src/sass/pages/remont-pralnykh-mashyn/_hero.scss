@@ -45,7 +45,7 @@
       padding-right: 56px;
     }
 
-    @include tablet{
+    @include tablet {
       margin-top: 60px;
     }
   }
@@ -57,7 +57,11 @@
       z-index: -1;
     }
 
-    @include mobile;
+    @include mobile {
+      width: 100%;
+      height: auto;
+    }
+
     @include tablet {
       width: 100%;
       height: auto;
@@ -149,7 +153,9 @@
     font-weight: 400;
     line-height: normal;
 
-    @include mobile;
+    @include mobile {
+      margin-top: 0px;
+    }
     @include tablet {
       margin-top: 0px;
     }
@@ -166,7 +172,10 @@
     line-height: normal;
     gap: 10px;
 
-    @include mobile;
+    @include mobile {
+      margin-top: 7px;
+    }
+    
     @include tablet {
       margin-top: 7px;
     }

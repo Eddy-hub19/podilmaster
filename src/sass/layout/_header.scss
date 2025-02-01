@@ -326,11 +326,20 @@
   .header-contacts__descr {
     gap: 10px;
 
-    @include mobile;
+    @include mobile {
+      display: flex;
+      align-content: center;
+      color: $primary-color;
+      font-family: $manrope;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+
     @include tablet {
       display: flex;
       align-content: center;
-
       color: $primary-color;
       font-family: $manrope;
       font-size: 16px;

@@ -24,7 +24,10 @@
   width: 100%;
   display: block;
 
-  @include mobile;
+  @include mobile {
+    margin-bottom: 60px;
+  }
+
   @include tablet {
     margin-bottom: 60px;
   }
