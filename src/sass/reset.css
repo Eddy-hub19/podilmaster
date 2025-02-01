@@ -143,6 +143,14 @@ a:focus {
   outline-offset: 2px;
 }
 
+a {
+  outline: none; /* Убирает пунктирную рамку */
+}
+
+a:focus {
+  outline: none; /* Убирает рамку при фокусе */
+}
+
 /* a:visited {
   color: #551a8b;
   color: #901f7d;

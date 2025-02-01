@@ -29,7 +29,7 @@ function toggleSwiper() {
         slider.swiper = new Swiper(slider.id, {
           slidesPerView: 1,
           spaceBetween: 20,
-          loop: true,
+          loop: false,
           pagination: {
             el: `${slider.id} .swiper-pagination`,
             clickable: true,

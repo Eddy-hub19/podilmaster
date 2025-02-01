@@ -9,6 +9,7 @@
 
   @include mobile {
     padding: 36px 0px !important;
+    background: #f8f8f8;
   }
 
   @include tablet {
@@ -40,7 +41,8 @@
 
 .header-content {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
+  position: relative;
 
   @include mobile {
     align-items: center;
@@ -131,11 +133,12 @@
   z-index: 9999999;
 
   @include desktop {
-    right: 15%;
     width: 267px;
     min-height: 368px;
     max-height: fit-content;
     border-radius: 25px;
+    top: 0;
+    right: 0;
   }
 
   @include mobile {
@@ -145,7 +148,7 @@
     padding-left: 15px;
     justify-content: flex-start;
     align-items: baseline;
-    top: 100px;
+    top: 115px;
     left: 0;
     flex-direction: column;
     overflow-y: hidden;
@@ -158,7 +161,7 @@
     padding-left: 15px;
     justify-content: flex-start;
     align-items: baseline;
-    top: 100px;
+    top: 115px;
     left: 0;
     flex-direction: column;
     overflow-y: hidden;
@@ -168,11 +171,9 @@
 .menu-list {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
 
   @include desktop {
-    padding: 10px 0px;
-    align-items: flex-start;
+    padding: 58px 0 40px 0;
   }
 
   @include mobile {
@@ -189,13 +190,14 @@
 }
 
 .menu-list__item {
-  padding: 0px 35px;
+  display: flex;
   font-family: $manrope;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
   position: relative;
   cursor: pointer;
+  position: relative;
 
   @include mobile {
     margin: 0;
@@ -209,27 +211,27 @@
 
   a {
     display: inline-block;
-    margin-top: 15px;
+    padding: 20px 35px;
     font-family: $manrope;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    cursor: pointer;
+
+    &:hover {
+      color: $accent-color;
+    }
   }
 }
 
-.menu-list__item:first-child {
+.menu-list__item::first-letter {
   color: $accent-color;
 }
 
-.menu-list__item:hover {
-  color: $accent-color;
-}
-
-.menu-list__item:not(:last-child)::after {
+.menu-list__item:not(:first-child)::after {
   content: "";
   position: absolute;
-  bottom: -17px;
   left: 0;
   width: 100%;
   height: 1px;
@@ -256,6 +258,10 @@
 .mobile-menu {
   display: flex;
   align-items: flex-start;
+
+  @include desktop {
+    margin-bottom: 30px;
+  }
 }
 
 .phone-mobile {

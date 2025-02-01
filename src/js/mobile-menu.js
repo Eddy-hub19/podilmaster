@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Функция для переключения меню
     const toggleMenu = () => {
       const isOpen = menu.classList.contains('open');
+      document.body.classList.toggle('no-scroll');
       menu.classList.toggle('open', !isOpen);
       hamburger.style.display = isOpen ? 'block' : 'none';
       closeMenu.style.display = isOpen ? 'none' : 'block';

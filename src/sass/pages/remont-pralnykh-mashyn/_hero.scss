@@ -25,7 +25,13 @@
 
   .mobile-hero-info {
     display: none;
-    @include mobile;
+    @include mobile {
+      margin-top: 20px;
+      margin-bottom: 30px;
+      display: flex;
+      justify-content: space-between;
+    }
+
     @include tablet {
       margin-top: 20px;
       margin-bottom: 30px;
@@ -37,6 +43,10 @@
   .content-left {
     @include desktop {
       padding-right: 56px;
+    }
+
+    @include tablet{
+      margin-top: 60px;
     }
   }
 

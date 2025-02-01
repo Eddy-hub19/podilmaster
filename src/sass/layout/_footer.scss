@@ -14,6 +14,10 @@
       flex-direction: column;
       align-items: flex-start;
     }
+
+    @include tablet {
+      align-items: center;
+    }
   }
 
   .footer-logo {
@@ -31,6 +35,14 @@
     }
 
     @include mobile {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 15px;
+      margin-top: 30px;
+    }
+
+    @include tablet {
       display: flex;
       flex-direction: column;
       align-items: flex-start;
@@ -71,7 +83,6 @@
   display: flex;
   gap: 10px;
 }
-
 
 .copyright {
   color: $primary-color;

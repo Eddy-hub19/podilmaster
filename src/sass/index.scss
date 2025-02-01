@@ -51,6 +51,14 @@ body {
   @include mobile {
     padding-top: 60px;
   }
+
+  @include tablet {
+    padding-top: 60px;
+  }
+}
+
+.no-scroll {
+  overflow: hidden;
 }
 
 button {
@@ -62,11 +70,14 @@ button {
 }
 
 .header {
-  background: #dadfdb22;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
   padding: 24px 20px;
   text-align: center;
+
+  @include desktop {
+    background: #dadfdb22;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
 }
 
 .flex {
