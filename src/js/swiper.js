@@ -8,7 +8,7 @@ let swiper7 = null;
 let swiper8 = null;
 
 function toggleSwiper() {
-  const isMobile = window.innerWidth < 1024; // Условие для мобильных устройств и планшетов
+  const isMobile = window.innerWidth < 1023; // Условие для мобильных устройств и планшетов
 
   // Для всех слайдеров проверка на мобильность
   const sliders = [
@@ -29,7 +29,8 @@ function toggleSwiper() {
         slider.swiper = new Swiper(slider.id, {
           slidesPerView: 1,
           spaceBetween: 20,
-          loop: false,
+          autoplay: false,
+          loop: true,
           pagination: {
             el: `${slider.id} .swiper-pagination`,
             clickable: true,
@@ -37,10 +38,6 @@ function toggleSwiper() {
           navigation: {
             nextEl: `${slider.id} .swiper-button-next`,
             prevEl: `${slider.id} .swiper-button-prev`,
-          },
-          autoplay: {
-            delay: 3000,
-            disableOnInteraction: false,
           },
         });
       }
@@ -59,3 +56,8 @@ window.addEventListener('load', toggleSwiper);
 
 // Перезапуск функции при изменении размера окна
 window.addEventListener('resize', toggleSwiper);
+
+// autoplay: {
+//   delay: 3000,
+//   disableOnInteraction: false,
+// },

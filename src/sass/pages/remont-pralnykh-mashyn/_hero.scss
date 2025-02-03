@@ -29,6 +29,7 @@
       margin-top: 20px;
       margin-bottom: 30px;
       display: flex;
+      align-items: center;
       justify-content: space-between;
     }
 
@@ -63,7 +64,6 @@
     }
 
     @include tablet {
-      width: 100%;
       height: auto;
     }
   }
@@ -82,14 +82,12 @@
 
   .hero-title {
     font-size: 115px;
-    line-height: 100%;
+    line-height: 1;
     letter-spacing: 1.15px;
-    word-break: break-word;
+    color: $primary-color;
 
     @include mobile {
-      color: $primary-color;
       font-size: 50px;
-      line-height: 1;
       letter-spacing: 0.55px;
       margin-top: 30px;
     }
@@ -97,14 +95,16 @@
     @include tablet {
       color: $primary-color;
       font-size: 55px;
-      line-height: 1;
       letter-spacing: 0.55px;
     }
 
     .hero-title-span {
       margin-right: 15px;
 
-      @include mobile;
+      @include mobile {
+        margin-right: 5px;
+      }
+
       @include tablet {
         margin-right: 5px;
       }
@@ -112,35 +112,35 @@
   }
 
   .hero-call {
+    color: $accent-color;
+    font-family: $psytype;
     @include desktop {
       position: relative;
       margin-top: 32px;
-      color: $accent-color;
       font-size: 32px;
       line-height: 1;
       letter-spacing: 0.32px;
     }
 
     @include mobile {
-      color: $accent-color;
-      font-family: PsyType;
       font-size: 24px;
-      font-style: normal;
       font-weight: 400;
-      line-height: 100%;
       letter-spacing: 0.24px;
       text-transform: uppercase;
     }
 
     @include tablet {
-      color: $accent-color;
-      font-family: PsyType;
       font-size: 24px;
-      font-style: normal;
       font-weight: 400;
-      line-height: 100%;
       letter-spacing: 0.24px;
       text-transform: uppercase;
+    }
+  }
+
+  .hero-call-img {
+    @include mobile {
+      width: 18px;
+      height: 18px;
     }
   }
 
@@ -175,7 +175,7 @@
     @include mobile {
       margin-top: 7px;
     }
-    
+
     @include tablet {
       margin-top: 7px;
     }
@@ -193,7 +193,10 @@
 }
 
 .descktop-hero-descr {
-  @include mobile;
+  @include mobile {
+    display: none;
+  }
+  
   @include tablet {
     display: none;
   }

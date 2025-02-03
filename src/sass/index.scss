@@ -183,3 +183,52 @@ img {
   font-weight: 400;
   line-height: normal;
 }
+
+//
+
+// Стили для карточки
+.cart {
+  position: relative;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 12%;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 155px;
+    height: 155px;
+  }
+
+  &::before {
+    top: 0;
+    left: 0;
+    border-top-left-radius: 55px;
+    box-shadow: -1px -1px 0.5px $secondary-color;
+  }
+
+  &::after {
+    bottom: 0;
+    right: 0;
+    border-bottom-right-radius: 55px;
+    box-shadow: 1px 1px 1px $secondary-color;
+  }
+}
+
+// Общие стили для слайдов
+.item {
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+  flex-shrink: 0;
+  border-radius: 55px;
+  background: #f7f7f7 !important;
+
+  @include desktop {
+    width: 100%;
+    min-height: 100%;
+  }
+}

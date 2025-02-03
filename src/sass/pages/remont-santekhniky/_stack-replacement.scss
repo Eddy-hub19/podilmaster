@@ -6,9 +6,14 @@
 
   .item {
     padding: 30px;
+
+    @include desktop {
+      width: calc(100% / 3 - 48px);
+    }
   }
 
-  .swiper-wrapper{
+  .swiper-wrapper {
     display: flex;
+    align-items: center;
   }
 }

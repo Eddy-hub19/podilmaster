@@ -1,4 +1,11 @@
 .machine-noise-problem {
+  .swiper-wrapper {
+    @media (min-width: 1024px) and (max-width: 1400px) {
+      flex-wrap: wrap;
+      width: 100%;
+    }
+  }
+
   .item {
     @include tablet {
       display: flex;
@@ -6,14 +13,14 @@
       width: 100% !important;
       justify-content: center;
       padding: 25px 25px;
-
-      img {
-        width: 100%;
-      }
     }
 
     @include mobile {
-      padding: 25px 25px 116px;
+      padding: 25px 25px;
+    }
+
+    @media (min-width: 1024px) and (max-width: 1400px) {
+      width: 100% !important;
     }
   }
 }
@@ -53,7 +60,7 @@
 
 .machine-noise-problem-content {
   @include desktop {
-    padding: 30px;
+    padding: 30px 28px 30px;
   }
 
   @include mobile {

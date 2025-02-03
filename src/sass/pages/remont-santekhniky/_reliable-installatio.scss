@@ -1,7 +1,24 @@
 #reliable-installatio {
+
+  .swiper-wrapper{
+    margin-top: 30px;
+  }
+
   .swiper {
+    @include mobile {
+      overflow: visible;
+    }
+
     @include tablet {
       overflow: visible;
+    }
+  }
+
+  .swiper-slide{
+    padding: 30px;
+
+    @include mobile{
+      padding: 25px;
     }
   }
 
@@ -21,7 +38,10 @@
       min-height: auto;
       padding: 30px;
 
-      @include mobile;
+      @include mobile {
+        width: 100%;
+      }
+
       @include tablet {
         width: 100%;
       }

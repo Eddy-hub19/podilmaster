@@ -28,6 +28,23 @@
 }
 
 .cladding-foam {
+  .swiper-slide {
+    padding: 30px;
+
+    @include mobile {
+      padding: 25px;
+    }
+  }
+
+  #elements-list-1,
+  #elements-list-2,
+  #elements-list-3,
+  #elements-list-4 {
+    @include mobile {
+      margin: 0 !important;
+    }
+  }
+
   .flex {
     @include desktop {
       align-items: center;
@@ -41,7 +58,7 @@
       justify-content: space-between;
     }
 
-    @include mobile{
+    @include mobile {
       flex-direction: column;
     }
   }
@@ -61,6 +78,15 @@
 }
 
 .siding-covering {
+
+  .swiper-slide{
+    padding: 30px;
+
+    @include mobile{
+      padding: 25px;
+    }
+  }
+
   .item {
     min-height: 300px;
     @include desktop {

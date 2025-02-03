@@ -30,13 +30,11 @@
     @include mobile {
       width: 100%;
       min-height: auto;
-      overflow: hidden;
     }
 
     @include tablet {
       width: 100%;
       min-height: auto;
-      overflow: hidden;
     }
   }
 }

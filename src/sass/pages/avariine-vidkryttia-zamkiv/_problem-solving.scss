@@ -22,8 +22,14 @@
   }
 
   .swiper-slide {
+    padding: 30px;
+
     @include desktop {
       width: calc((100% / 4) - 49px);
+    }
+
+    @include tablet {
+      width: calc((100% / 2) - 49px);
     }
 
     @include mobile {
@@ -32,7 +38,7 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      overflow: hidden;
+      padding: 25px;
     }
 
     @include tablet {
@@ -41,7 +47,6 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      overflow: hidden;
     }
   }
 }

@@ -1,4 +1,18 @@
 .common-issues {
+  @include mobile {
+    padding-top: 60px;
+  }
+
+  @include tablet {
+    padding-top: 60px;
+  }
+
+  img {
+    @include tablet {
+      margin: 0 auto;
+    }
+  }
+
   .common-issues-title,
   .common-issues-descr {
     color: $primary-color;
@@ -65,7 +79,6 @@
   }
 
   .common-issues-m-img {
-    width: 100%;
     margin-top: 20px;
   }
 }

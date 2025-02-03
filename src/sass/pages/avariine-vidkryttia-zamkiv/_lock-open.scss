@@ -1,4 +1,23 @@
 .lock-open {
+  #elements-list-1 .element,
+  #elements-list-2 .element,
+  #elements-list-3 .element,
+  #elements-list-4 .element {
+    @include mobile {
+      margin-bottom: 0;
+    }
+  }
+
+  .list:not(:last-child) {
+    @include mobile {
+      margin-top: 20px !important;
+    }
+  }
+
+  @include mobile {
+    margin-top: 60px;
+  }
+
   .flex {
     @include mobile {
       display: block;
@@ -24,10 +43,6 @@
     }
   }
 
-  @include mobile {
-    margin-top: 120px;
-  }
-
   .wrap-list {
     display: flex;
     align-items: center;
@@ -42,10 +57,12 @@
 
     @include mobile {
       flex-direction: column;
+      align-items: flex-start;
     }
 
     @include tablet {
       flex-direction: column;
+      align-items: flex-start;
     }
 
     .list {
