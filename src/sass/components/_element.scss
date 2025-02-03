@@ -24,29 +24,41 @@
       line-height: 1;
       letter-spacing: 0.55px;
       text-transform: uppercase;
-      // padding-left: 20px;
+      width: 71px;
+      height: 71px;
+      border-radius: 50%;
+      border: 1px solid $accent-color;
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
       @include mobile {
         font-size: 32px;
         letter-spacing: 0.32px;
       }
 
-      &::before {
-        content: "";
-        position: absolute;
-        width: 71px;
-        height: 71px;
-        border-radius: 50%;
-        border: 1px solid $accent-color;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+      // &::after {
+      //   content: "";
+      //   position: absolute;
+      //   width: 71px;
+      //   height: 71px;
+      //   border-radius: 50%;
+      //   border: 1px solid $accent-color;
+      //   display: flex;
+      //   align-items: center;
+      //   justify-content: center;
 
-        @include mobile {
-          width: 51px;
-          height: 51px;
-        }
-      }
+      //   @include mobile {
+      //     width: 51px;
+      //     height: 51px;
+      //   }
+      // }
+    }
+
+    span.element-number {
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .element-text {
