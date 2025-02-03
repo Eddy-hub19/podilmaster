@@ -98,16 +98,16 @@
 .logo {
   width: 168px;
   height: 57px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   @include tablet {
-    width: 156px;
-    height: 43px;
+    height: auto;
   }
 
   @include mobile {
-    width: 126px;
-    width: auto;
-    height: 43px;
+    height: auto;
   }
 }
 
