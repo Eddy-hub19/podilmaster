@@ -205,6 +205,7 @@ img {
     left: 0;
     border-top-left-radius: 55px;
     box-shadow: -.3px -.4px 0.3px $secondary-color;
+    
   }
 
   &::after {
@@ -212,7 +213,9 @@ img {
     right: 0;
     border-bottom-right-radius: 55px;
 
-    box-shadow: .4px .3px .3px $secondary-color;
+    // box-shadow: .4px .3px .3px $secondary-color;
+
+    background-image: url('/src/images/TEST.svg');
   }
 }
 
