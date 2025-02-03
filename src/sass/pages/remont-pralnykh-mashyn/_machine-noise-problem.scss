@@ -15,7 +15,7 @@
       padding: 25px 25px;
     }
 
-    @include mobile {
+    @include responsive(mobile, tablet) {
       padding: 25px 25px;
     }
 
@@ -35,11 +35,7 @@
   letter-spacing: 0.32px;
   text-transform: uppercase;
 
-  @include mobile {
-    font-size: 32px;
-  }
-
-  @include tablet {
+  @include responsive(mobile, tablet) {
     font-size: 32px;
   }
 }
@@ -63,7 +59,7 @@
     padding: 30px 28px 30px;
   }
 
-  @include mobile {
+  @include responsive(mobile, tablet) {
     padding: 0 !important;
   }
 }

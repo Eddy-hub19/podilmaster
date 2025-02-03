@@ -1,15 +1,22 @@
+// ------------------------------
+// Price List (Список цен)
+// ------------------------------
+
 .price-list {
   background: #ffffff;
 
+  // Border settings for price list
   .border {
     width: 100%;
 
+    // Для мобильных устройств - отступ сверху
     @include mobile {
       margin-top: 20px;
       width: 100%;
     }
   }
 
+  // Верхний отступ для элементов с классом mg-top30
   .mg-top30 {
     @include mobile {
       margin-top: 20px;
@@ -27,12 +34,13 @@
     text-transform: uppercase;
     margin-right: 20px;
 
-    @include mobile {
+    @include responsive(mobile, tablet) {
       font-size: 32px;
       margin-right: 20px;
     }
   }
 
+  // Price List Table (Таблица цен)
   &-table {
     display: flex;
     max-width: 100%;
@@ -42,13 +50,15 @@
     border: 1px solid $primary-color;
     position: relative;
 
+    // Для мобильных устройств - изменение отступов и отображения
     @include mobile {
       padding: 25px 0;
       display: flex;
-      position: relative;
       flex-direction: column;
+      position: relative;
     }
 
+    // Разделитель (после таблицы)
     &::after {
       content: "";
       position: absolute;
@@ -58,11 +68,13 @@
       top: 0;
       left: 50%;
 
+      // Для мобильных - скрытие разделителя
       @include mobile {
         display: none;
       }
     }
 
+    // Price List Column (Столбцы таблицы)
     .price-list-column {
       width: 100%;
 
@@ -72,15 +84,16 @@
           justify-content: space-between;
           align-items: center;
           padding: 21px 0;
-
           border-bottom: 1px solid $border-color;
 
+          // Для мобильных - отступы и выравнивание
           @include mobile {
             margin: 13px 0;
             display: flex;
             align-items: center;
           }
 
+          // Service Name (Название услуги)
           .service-name {
             color: $primary-color;
             font-family: $manrope;
@@ -90,19 +103,15 @@
             line-height: normal;
             padding-left: 57px;
 
-            @include mobile {
+            // Для мобильных и планшетов - уменьшение отступа и перенос слов
+            @include responsive(mobile, tablet) {
               font-size: 16px;
               padding-left: 15px;
-              word-break: auto-phrase;
-            }
-
-            @include tablet {
-              font-size: 16px;
-              padding-left: 17px;
-              word-break: auto-phrase;
+              word-break: break-word;
             }
           }
 
+          // Price (Цена)
           .price {
             color: $accent-color;
             text-align: right;
@@ -113,20 +122,10 @@
             line-height: normal;
             padding-right: 57px;
 
-            @include mobile {
+            // Для мобильных и планшетов - уменьшение шрифта и отступа
+            @include responsive(mobile, tablet) {
               font-size: 24px;
-              font-style: normal;
-              font-weight: 400;
-              line-height: normal;
               padding-right: 15px;
-            }
-
-            @include tablet {
-              font-size: 24px;
-              font-style: normal;
-              font-weight: 400;
-              line-height: normal;
-              padding-right: 17px;
             }
           }
         }
@@ -135,10 +134,15 @@
   }
 }
 
+// -------------------------------
+// Price List Wrapper (Обертка для списка цен)
+// -------------------------------
+
 .price-list-wrap {
   display: flex;
   align-items: center;
 
+  // Для мобильных - выравнивание по вертикали
   @include mobile {
     flex-direction: column;
     align-items: flex-start;

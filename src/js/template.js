@@ -15,7 +15,8 @@ document.addEventListener('DOMContentLoaded', function () {
       elementClone.querySelector('.element-number').textContent = number;
       elementClone.querySelector('.element-text').textContent = text;
 
-      rawElement.replaceWith(elementClone);
+      elementsList.appendChild(elementClone);
+      rawElement.remove();
     });
   }
 
@@ -24,4 +25,6 @@ document.addEventListener('DOMContentLoaded', function () {
   initializeElementsFromHTML('elements-list-3');
   initializeElementsFromHTML('elements-list-4');
   initializeElementsFromHTML('elements-list-5');
+  initializeElementsFromHTML('elements-list-6');
+  initializeElementsFromHTML('elements-list-7');
 });

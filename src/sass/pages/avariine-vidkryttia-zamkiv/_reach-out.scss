@@ -10,13 +10,13 @@
       width: 931px;
     }
 
-    @include mobile {
+    @include responsive(mobile, tablet) {
       width: 100%;
     }
   }
 
   .flex {
-    @include mobile {
+    @include responsive(mobile, tablet) {
       display: flex;
       flex-direction: column !important;
       align-content: center;

@@ -48,11 +48,7 @@ body {
 .section {
   padding-top: 120px;
 
-  @include mobile {
-    padding-top: 60px;
-  }
-
-  @include tablet {
+  @include responsive(mobile, tablet) {
     padding-top: 60px;
   }
 }
@@ -108,11 +104,7 @@ body {
 }
 
 .dis-non-mobile {
-  @include mobile {
-    display: none;
-  }
-
-  @include tablet {
+  @include responsive(mobile, tablet) {
     display: none;
   }
 }
@@ -204,8 +196,7 @@ img {
     top: 0;
     left: 0;
     border-top-left-radius: 55px;
-    box-shadow: -.3px -.4px 0.3px $secondary-color;
-    
+    box-shadow: -0.3px -0.4px 0.3px $secondary-color;
   }
 
   &::after {
@@ -213,26 +204,6 @@ img {
     right: 0;
     border-bottom-right-radius: 55px;
 
-    // box-shadow: .4px .3px .3px $secondary-color;
-
-    background-image: url('/src/images/TEST.svg');
-  }
-}
-
-// Общие стили для слайдов
-.item {
-  width: auto;
-  height: auto;
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-  justify-content: center;
-  flex-shrink: 0;
-  border-radius: 55px;
-  background: #f7f7f7 !important;
-
-  @include desktop {
-    width: 100%;
-    min-height: 100%;
+    box-shadow: 0.4px 0.3px 0.3px $secondary-color;
   }
 }

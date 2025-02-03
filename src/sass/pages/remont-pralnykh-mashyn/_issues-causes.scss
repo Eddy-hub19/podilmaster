@@ -1,6 +1,6 @@
 .issues-causes {
   .mg-top30 {
-    @include mobile {
+    @include responsive(mobile, tablet) {
       margin-top: 20px;
     }
   }
@@ -22,12 +22,7 @@
   letter-spacing: 0.32px;
   text-transform: uppercase;
 
-  @include mobile {
-    font-size: 24px;
-    letter-spacing: 0.24px;
-  }
-
-  @include tablet {
+  @include responsive(mobile, tablet) {
     font-size: 24px;
     letter-spacing: 0.24px;
   }
@@ -56,7 +51,7 @@
   display: flex;
   gap: 48px;
 
-  @include mobile {
+  @include responsive(mobile, tablet) {
     display: block;
     gap: 20px;
   }
@@ -66,7 +61,7 @@
   width: 407px;
   min-height: 410px;
 
-  @include mobile {
+  @include responsive(mobile, tablet) {
     width: 100%;
     min-height: 414px;
   }
@@ -81,7 +76,7 @@
   border-radius: 55px;
   background: #f7f7f7;
 
-  @include mobile {
+  @include responsive(mobile, tablet) {
     width: 100%;
     padding: 20px;
 
@@ -98,29 +93,20 @@
     line-height: 1;
     letter-spacing: 0.55px;
     text-transform: uppercase;
-    padding-left: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    @include mobile {
+    width: 77px;
+    height: 77px;
+
+    border-radius: 50%;
+    border: 1px solid $accent-color;
+
+    @include responsive(mobile, tablet) {
       font-size: 40px;
-    }
-
-    &::before {
-      content: "";
-      position: absolute;
-      width: 77px;
-      height: 77px;
-      top: 20px;
-      left: 30px;
-      border-radius: 50%;
-      border: 1px solid $accent-color;
-
-      @include mobile {
-        top: 10px;
-        left: 30px;
-        width: 52px;
-        height: 52px;
-        font-size: 32px;
-      }
+      width: 52px;
+      height: 52px;
     }
   }
 }
@@ -130,7 +116,7 @@
   height: 1px;
   background: $accent-color;
 
-  @include mobile {
+  @include responsive(mobile, tablet) {
     width: 100%;
   }
 }
@@ -140,7 +126,6 @@
   width: 100%;
 }
 
-// Test
 .swiper-wrapper {
   @media (min-width: 1024px) and (max-width: 1400px) {
     flex-wrap: wrap;

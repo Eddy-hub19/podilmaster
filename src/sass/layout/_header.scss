@@ -7,13 +7,9 @@
   z-index: 1000;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 
-  @include mobile {
+  @include responsive(mobile, tablet) {
     padding: 36px 0px !important;
     background: #f8f8f8;
-  }
-
-  @include tablet {
-    padding: 36px 0px !important;
   }
 
   .info-list {
@@ -24,20 +20,14 @@
       color: $primary-color;
       font-family: $manrope;
       font-size: 16px;
-      font-style: normal;
       font-weight: 400;
-      line-height: normal;
 
       &:hover {
         color: #3475ff;
       }
     }
 
-    @include tablet {
-      display: none;
-    }
-
-    @include mobile {
+    @include responsive(mobile, tablet) {
       display: none;
     }
   }
@@ -48,12 +38,7 @@
   align-items: center;
   position: relative;
 
-  @include mobile {
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  @include tablet {
+  @include responsive(mobile, tablet) {
     align-items: center;
     justify-content: space-between;
   }
@@ -75,11 +60,8 @@
   .phone-number,
   .name {
     color: $primary-color;
-    font-family: $manrope;
     font-size: 16px;
-    font-style: normal;
     font-weight: 400;
-    line-height: normal;
 
     &:hover {
       color: #3475ff;
@@ -102,24 +84,16 @@
   align-items: center;
   justify-content: center;
 
-  @include tablet {
-    height: auto;
-  }
-
-  @include mobile {
+  @include responsive(mobile, tablet) {
     height: auto;
   }
 }
 
-// hamberger
+// Hamburger
 .hamburger {
   cursor: pointer !important;
 
-  @include mobile {
-    width: 30px;
-  }
-
-  @include tablet {
+  @include responsive(mobile, tablet) {
     width: 30px;
   }
 
@@ -131,48 +105,32 @@
 .menu {
   display: none;
   position: relative;
-}
 
-.menu.open {
-  display: flex;
-  position: absolute;
-  background: #fff;
-  box-shadow: 0px 8px 13.2px rgba(0, 0, 0, 0.25);
-  z-index: 9999999;
+  &.open {
+    display: flex;
+    position: absolute;
+    background: #fff;
+    box-shadow: 0px 8px 13.2px rgba(0, 0, 0, 0.25);
+    z-index: 9999999;
 
-  @include desktop {
-    width: 267px;
-    min-height: 368px;
-    max-height: fit-content;
-    border-radius: 25px;
-    top: 0;
-    right: 0;
-  }
+    @include desktop {
+      width: 267px;
+      min-height: 368px;
+      border-radius: 25px;
+      top: 0;
+      right: 0;
+    }
 
-  @include mobile {
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-    padding-left: 15px;
-    justify-content: flex-start;
-    align-items: baseline;
-    top: 129px;
-    left: 0;
-    flex-direction: column;
-    overflow-y: hidden;
-  }
-
-  @include tablet {
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-    padding-left: 15px;
-    justify-content: flex-start;
-    align-items: baseline;
-    top: 130px;
-    left: 0;
-    flex-direction: column;
-    overflow-y: hidden;
+    @include responsive(mobile, tablet) {
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      padding-left: 15px;
+      top: 129px;
+      left: 0;
+      flex-direction: column;
+      overflow-y: hidden;
+    }
   }
 }
 
@@ -184,35 +142,20 @@
     padding: 58px 0 40px 0;
   }
 
-  @include mobile {
-    flex-direction: column;
-    align-items: flex-start;
+  @include responsive(mobile, tablet) {
     margin-top: 40px;
-  }
-
-  @include tablet {
-    flex-direction: column;
     align-items: flex-start;
-    margin-top: 40px;
   }
 }
 
 .menu-list__item {
   display: flex;
   font-family: $manrope;
-  font-style: normal;
   font-weight: 400;
-  line-height: normal;
   position: relative;
   cursor: pointer;
-  position: relative;
 
-  @include mobile {
-    margin: 0;
-    padding: 0 16px;
-  }
-
-  @include tablet {
+  @include responsive(mobile, tablet) {
     margin: 0;
     padding: 0 16px;
   }
@@ -222,20 +165,14 @@
     padding: 20px 35px;
     font-family: $manrope;
     font-size: 16px;
-    font-style: normal;
     font-weight: 400;
-    line-height: normal;
     cursor: pointer;
 
     &:hover {
       color: $accent-color;
     }
 
-    @include mobile {
-      padding: 15px 0;
-    }
-
-    @include tablet {
+    @include responsive(mobile, tablet) {
       padding: 15px 0;
     }
   }
@@ -253,16 +190,12 @@
   height: 1px;
   background: #d8d8d8;
 
-  @include mobile {
-    display: none;
-  }
-
-  @include tablet {
+  @include responsive(mobile, tablet) {
     display: none;
   }
 }
 
-// overlay
+// Overlay
 .overlay {
   display: none;
   position: fixed;
@@ -274,7 +207,7 @@
   z-index: 1;
 }
 
-// mobile-menu
+// Mobile menu
 .mobile-menu {
   display: flex;
   align-items: flex-start;
@@ -299,11 +232,7 @@
   right: 20px;
   cursor: pointer;
 
-  @include mobile {
-    display: none;
-  }
-
-  @include tablet {
+  @include responsive(mobile, tablet) {
     display: none;
   }
 }
@@ -314,17 +243,12 @@
   height: 30px;
   cursor: pointer;
 
-  @include mobile {
-    display: none;
-  }
-
-  @include desktop {
+  @include responsive(mobile, desktop) {
     display: none;
   }
 }
 
-// MENU MOBILE
-
+// Mobile navigation
 .nav-mobile {
   @include desktop {
     display: none;
@@ -335,44 +259,27 @@
   @include desktop {
     display: none;
   }
-  @include mobile {
-    margin-top: 40px;
-  }
 
-  @include tablet {
+  @include responsive(mobile, tablet) {
     margin-top: 40px;
   }
 
   .header-contacts__descr {
     gap: 10px;
 
-    @include mobile {
+    @include responsive(mobile, tablet) {
       display: flex;
       align-content: center;
       color: $primary-color;
       font-family: $manrope;
       font-size: 16px;
-      font-style: normal;
       font-weight: 400;
-      line-height: normal;
-    }
-
-    @include tablet {
-      display: flex;
-      align-content: center;
-      color: $primary-color;
-      font-family: $manrope;
-      font-size: 16px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: normal;
     }
   }
 
   .nav-mobile-wrap {
     display: flex;
     align-items: flex-start;
-    align-items: center;
   }
 }
 
@@ -380,9 +287,7 @@
   color: $primary-color;
   font-family: $manrope;
   font-size: 16px;
-  font-style: normal;
   font-weight: 400;
-  line-height: normal;
 
   &:hover {
     color: #3475ff;
@@ -397,12 +302,7 @@
 .icon-img {
   width: auto;
 
-  @include mobile {
-    width: 24px;
-    height: 24px;
-  }
-
-  @include tablet {
+  @include responsive(mobile, tablet) {
     width: 24px;
     height: 24px;
   }

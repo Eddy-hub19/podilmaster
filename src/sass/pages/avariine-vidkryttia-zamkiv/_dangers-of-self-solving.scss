@@ -1,22 +1,29 @@
 .dangers-of-self-solving {
+  .flex {
+    @include responsive(mobile, tablet) {
+      display: block;
+    }
+  }
+
   .title {
     position: relative;
   }
   .border {
     width: 301px;
     margin-left: 20px;
+
+    @include responsive(mobile, tablet) {
+      margin-top: 20px;
+      width: 100%;
+      margin-left: 0;
+    }
   }
 
   .swiper-wrapper {
     flex-wrap: wrap;
     gap: 48px;
 
-    @include mobile {
-      flex-wrap: nowrap;
-      gap: 0;
-    }
-
-    @include tablet {
+    @include responsive(mobile, tablet) {
       flex-wrap: nowrap;
       gap: 0;
     }
@@ -27,12 +34,7 @@
       width: calc((100% / 3 - 48px));
     }
 
-    @include mobile {
-      width: 100%;
-      min-height: auto;
-    }
-
-    @include tablet {
+    @include responsive(mobile, tablet) {
       width: 100%;
       min-height: auto;
     }

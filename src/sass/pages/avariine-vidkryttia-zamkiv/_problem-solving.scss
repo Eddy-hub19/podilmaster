@@ -7,17 +7,11 @@
     gap: 49px;
     margin-top: 30px;
 
-    @include mobile {
+    @include responsive(mobile, tablet) {
       align-items: center;
       justify-content: center;
       flex-wrap: nowrap;
       gap: 0;
-    }
-
-    @include tablet {
-      align-items: center;
-      justify-content: center;
-      flex-wrap: nowrap;
     }
   }
 
@@ -32,21 +26,13 @@
       width: calc((100% / 2) - 49px);
     }
 
-    @include mobile {
+    @include responsive(mobile, tablet) {
       width: 100%;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       padding: 25px;
-    }
-
-    @include tablet {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
     }
   }
 }

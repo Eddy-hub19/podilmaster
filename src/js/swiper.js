@@ -6,6 +6,7 @@ let swiper5 = null;
 let swiper6 = null;
 let swiper7 = null;
 let swiper8 = null;
+let swiper9 = null;
 
 function toggleSwiper() {
   const isMobile = window.innerWidth < 1023; // Условие для мобильных устройств и планшетов
@@ -20,6 +21,7 @@ function toggleSwiper() {
     { swiper: swiper6, id: '#slider6' },
     { swiper: swiper7, id: '#slider7' },
     { swiper: swiper8, id: '#slider8' },
+    { swiper: swiper9, id: '#slider9' },
   ];
 
   sliders.forEach(slider => {
@@ -56,8 +58,3 @@ window.addEventListener('load', toggleSwiper);
 
 // Перезапуск функции при изменении размера окна
 window.addEventListener('resize', toggleSwiper);
-
-// autoplay: {
-//   delay: 3000,
-//   disableOnInteraction: false,
-// },

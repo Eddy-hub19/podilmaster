@@ -2,7 +2,8 @@
   #elements-list-1 .element,
   #elements-list-2 .element,
   #elements-list-3 .element,
-  #elements-list-4 .element {
+  #elements-list-4 .element,
+  #elements-list-5 .element {
     @include mobile {
       margin-bottom: 0;
     }
@@ -14,16 +15,12 @@
     }
   }
 
-  @include mobile {
+  @include responsive(mobile, tablet) {
     margin-top: 60px;
   }
 
   .flex {
-    @include mobile {
-      display: block;
-    }
-
-    @include tablet {
+    @include responsive(mobile, tablet) {
       display: block;
     }
   }
@@ -34,11 +31,7 @@
       margin-left: 20px;
     }
 
-    @include mobile {
-      margin-top: 20px;
-    }
-
-    @include tablet {
+    @include responsive(mobile, tablet) {
       margin-top: 20px;
     }
   }
@@ -51,16 +44,12 @@
     #elements-list-1,
     #elements-list-2,
     #elements-list-3,
-    #elements-list-4 {
+    #elements-list-4,
+    #elements-list-5 {
       margin: 0;
     }
 
-    @include mobile {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-
-    @include tablet {
+    @include responsive(mobile, tablet) {
       flex-direction: column;
       align-items: flex-start;
     }

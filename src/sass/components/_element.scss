@@ -1,7 +1,8 @@
 #elements-list-1,
 #elements-list-2,
 #elements-list-3,
-#elements-list-4 {
+#elements-list-4,
+#elements-list-5 {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -30,7 +31,7 @@
       justify-content: center;
       flex-shrink: 0;
 
-      @include mobile {
+      @include responsive(mobile, tablet) {
         font-size: 32px;
         letter-spacing: 0.32px;
         width: 51px;

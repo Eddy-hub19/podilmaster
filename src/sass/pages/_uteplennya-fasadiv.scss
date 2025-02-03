@@ -1,13 +1,36 @@
+// ------------------------------
 // uteplennya-fasadiv page
+// ------------------------------
 
 .heat-home {
+  @include responsive(mobile, tablet) {
+    padding-top: 60px;
+  }
+
   .border3 {
     @include desktop {
       margin-left: 20px;
       width: 727px;
     }
   }
+
+  .wrap {
+    @include responsive(mobile, tablet) {
+      flex-direction: column;
+    }
+
+    .border3 {
+      @include responsive(mobile, tablet) {
+        margin-top: 20px;
+        width: 100%;
+      }
+    }
+  }
 }
+
+// ------------------------------
+// facade-materials (Материалы фасада)
+// ------------------------------
 
 .facade-materials {
   .swiper-slide {
@@ -17,21 +40,21 @@
       flex-shrink: 0;
     }
 
-    @include mobile {
-      width: 100%;
-    }
-
-    @include tablet {
+    @include responsive(mobile, tablet) {
       width: 100%;
     }
   }
 }
 
+// ------------------------------
+// cladding-foam (Утеплитель для фасадов)
+// ------------------------------
+
 .cladding-foam {
   .swiper-slide {
     padding: 30px;
 
-    @include mobile {
+    @include responsive(mobile, tablet) {
       padding: 25px;
     }
   }
@@ -40,7 +63,7 @@
   #elements-list-2,
   #elements-list-3,
   #elements-list-4 {
-    @include mobile {
+    @include responsive(mobile, tablet) {
       margin: 0 !important;
     }
   }
@@ -58,7 +81,7 @@
       justify-content: space-between;
     }
 
-    @include mobile {
+    @include responsive(mobile, tablet) {
       flex-direction: column;
     }
   }
@@ -77,31 +100,56 @@
   }
 }
 
-.siding-covering {
+// ------------------------------
+// siding-covering (Покрытие фасада)
+// ------------------------------
 
-  .swiper-slide{
+.siding-covering {
+  .swiper-slide {
     padding: 30px;
 
-    @include mobile{
+    @include responsive(mobile, tablet) {
       padding: 25px;
     }
   }
 
   .item {
     min-height: 300px;
+
     @include desktop {
       width: 407px;
       flex-shrink: 0;
     }
 
-    @include mobile {
+    @include responsive(mobile, tablet) {
       width: 100%;
       max-width: 100%;
     }
   }
 }
 
+// ------------------------------
+// order-facade (Заказ фасада)
+// ------------------------------
+
 .order-facade {
+  .flex {
+    @include responsive(mobile, tablet) {
+      flex-direction: column;
+
+      .border {
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  .subtitle {
+    @include responsive(mobile, tablet) {
+      margin-top: 20px;
+    }
+  }
+
   .border {
     @include desktop {
       width: 475px;
@@ -119,7 +167,7 @@
       gap: 48px;
     }
 
-    @include mobile {
+    @include responsive(mobile, tablet) {
       flex-direction: column;
       align-content: center;
     }

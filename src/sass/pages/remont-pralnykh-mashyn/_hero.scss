@@ -1,23 +1,23 @@
-// Hero Content
+// -------------------------------
+// Hero Content (Контент геро секции)
+// -------------------------------
 
 .hero-content {
+  // Настройки для мобильных и планшетов
+  @include responsive(mobile, tablet) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  // Для десктопа - выравнивание элементов по центру
   @include desktop {
     display: flex;
     align-items: center;
   }
 
-  @include mobile {
-    display: flex;
-    flex-direction: column;
-  }
-
-  @include tablet {
-    display: flex;
-    flex-direction: column;
-  }
-
   .border {
-    @include mobile {
+    // Общие настройки для мобильных и планшетов
+    @include responsive(mobile, tablet) {
       width: 100%;
       margin-bottom: 20px;
     }
@@ -25,41 +25,35 @@
 
   .mobile-hero-info {
     display: none;
-    @include mobile {
+
+    // Настройки для мобильных и планшетов
+    @include responsive(mobile, tablet) {
       margin-top: 20px;
       margin-bottom: 30px;
       display: flex;
       align-items: center;
       justify-content: space-between;
     }
-
-    @include tablet {
-      margin-top: 20px;
-      margin-bottom: 30px;
-      display: flex;
-      justify-content: space-between;
-    }
   }
 
   .content-left {
+    // Для десктопа - паддинг справа
     @include desktop {
       padding-right: 56px;
     }
   }
 
   .hero-img {
+    // Для десктопа - позиционирование изображения
     @include desktop {
       position: relative;
       top: -90px;
       z-index: -1;
     }
 
-    @include mobile {
+    // Для мобильных и планшетов - размеры изображения
+    @include responsive(mobile, tablet) {
       width: 100%;
-      height: auto;
-    }
-
-    @include tablet {
       height: auto;
     }
   }
@@ -82,26 +76,18 @@
     letter-spacing: 1.15px;
     color: $primary-color;
 
-    @include mobile {
+    // Для мобильных и планшетов - уменьшение шрифта и отступов
+    @include responsive(mobile, tablet) {
       font-size: 50px;
       letter-spacing: 0.55px;
       margin-top: 30px;
     }
 
-    @include tablet {
-      color: $primary-color;
-      font-size: 55px;
-      letter-spacing: 0.55px;
-    }
-
     .hero-title-span {
       margin-right: 15px;
 
-      @include mobile {
-        margin-right: 5px;
-      }
-
-      @include tablet {
+      // Для мобильных - уменьшение отступа
+      @include responsive(mobile, tablet) {
         margin-right: 5px;
       }
     }
@@ -110,6 +96,8 @@
   .hero-call {
     color: $accent-color;
     font-family: $psytype;
+
+    // Для десктопа - размеры и позиционирование
     @include desktop {
       position: relative;
       margin-top: 32px;
@@ -118,14 +106,8 @@
       letter-spacing: 0.32px;
     }
 
-    @include mobile {
-      font-size: 24px;
-      font-weight: 400;
-      letter-spacing: 0.24px;
-      text-transform: uppercase;
-    }
-
-    @include tablet {
+    // Для мобильных и планшетов - уменьшение шрифта
+    @include responsive(mobile, tablet) {
       font-size: 24px;
       font-weight: 400;
       letter-spacing: 0.24px;
@@ -134,6 +116,7 @@
   }
 
   .hero-call-img {
+    // Для мобильных - размеры изображения
     @include mobile {
       width: 18px;
       height: 18px;
@@ -141,42 +124,23 @@
   }
 
   .hero-descr {
-    margin-top: 32px;
+    @include desktop {
+      margin-top: 32px;
+    }
+    
     color: $primary-color;
     font-family: $manrope;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-
-    @include mobile {
-      margin-top: 0px;
-    }
-    @include tablet {
-      margin-top: 0px;
-    }
   }
 
-  // HERO - contanct number
+  // --------------------------
+  // Контактный номер в hero
+  // --------------------------
 
-  .contact-number {
-    color: $primary-color;
-    font-family: $manrope;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    gap: 10px;
-
-    @include mobile {
-      margin-top: 7px;
-    }
-
-    @include tablet {
-      margin-top: 7px;
-    }
-  }
-
+  .contact-number,
   .contact-name {
     color: $primary-color;
     font-family: $manrope;
@@ -185,15 +149,20 @@
     font-weight: 400;
     line-height: normal;
     gap: 10px;
+
+    // Для мобильных и планшетов - отступ сверху
+    @include responsive(mobile, tablet) {
+      margin-top: 7px;
+    }
   }
 }
 
-.descktop-hero-descr {
-  @include mobile {
-    display: none;
-  }
+// -------------------------------
+// Скрытие описаний для мобильных и планшетов
+// -------------------------------
 
-  @include tablet {
+.descktop-hero-descr {
+  @include responsive(mobile, tablet) {
     display: none;
   }
 }
@@ -201,5 +170,9 @@
 .mobile-hero-descr {
   @include desktop {
     display: none;
+  }
+
+  @include responsive(mobile, tablet) {
+    margin-top: 20px;
   }
 }

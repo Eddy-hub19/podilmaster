@@ -6,8 +6,21 @@
     }
   }
 
+  .flex {
+    @include responsive(mobile, tablet) {
+      display: block;
+    }
+
+    .border {
+      margin-top: 20px;
+    }
+  }
+
   .wrap {
     display: flex;
     gap: 60px;
+    @include responsive(mobile, tablet) {
+      flex-direction: column;
+    }
   }
 }

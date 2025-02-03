@@ -1,7 +1,6 @@
 .legal-aspects {
-
-  .flex{
-    @include mobile{
+  .flex {
+    @include responsive(mobile, tablet) {
       display: block;
     }
   }
@@ -12,8 +11,10 @@
       margin-left: 20px;
     }
 
-    @include mobile{
+    @include responsive(mobile, tablet) {
       margin-top: 20px;
+      width: 100%;
+      margin-left: 0;
     }
   }
 
@@ -21,7 +22,7 @@
     display: flex;
     gap: 50px;
 
-    @include mobile{
+    @include responsive(mobile, tablet) {
       flex-direction: column;
     }
   }
@@ -31,7 +32,7 @@
     align-items: flex-start;
     flex-direction: column;
 
-    @include mobile{
+    @include responsive(mobile, tablet) {
       flex-direction: column;
     }
   }

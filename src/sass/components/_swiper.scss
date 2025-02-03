@@ -4,11 +4,7 @@
   width: 100%;
   display: block;
 
-  @include mobile {
-    margin-bottom: 60px;
-  }
-
-  @include tablet {
+  @include responsive(mobile, tablet) {
     margin-bottom: 60px;
   }
 }
@@ -33,7 +29,6 @@
 
 // Пагинация (общие стили)
 .swiper-pagination {
-  // position: absolute;
   display: flex;
   justify-content: center;
   gap: 10px;
@@ -61,9 +56,8 @@
 // Стрелки для переключения слайдов
 .swiper-button-prev,
 .swiper-button-next {
-  // position: absolute;
-  // top: 113%;
-  // transform: translateY(-50%);
+  position: absolute;
+  top: 50%;
   z-index: 10;
   width: 24px;
   height: 24px;
@@ -74,11 +68,11 @@
   }
 
   &.swiper-button-prev {
-    left: 40%;
+    left: 100px;
   }
 
   &.swiper-button-next {
-    right: 40%;
+    right: 100px;
   }
 }
 
@@ -117,7 +111,36 @@
   position: relative;
   margin-top: 60px;
 
+  @include responsive(mobile, tablet) {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
   img {
     display: block;
+  }
+
+  @media (min-width: 1024px) {
+    img {
+      display: none;
+    }
+  }
+}
+
+// Общие стили для слайдов
+.item {
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+  flex-shrink: 0;
+  border-radius: 55px;
+  background: #f7f7f7 !important;
+
+  @include desktop {
+    width: 100%;
+    min-height: 100%;
   }
 }

@@ -1,19 +1,26 @@
 .lock-warning {
+  .flex {
+    @include responsive(mobile, tablet) {
+      display: block;
+    }
+  }
+
   .border {
     width: 376px;
     margin-left: 20px;
+
+    @include responsive(mobile, tablet) {
+      margin-top: 20px;
+      width: 100%;
+      margin-left: 0;
+    }
   }
 
   .list {
     display: flex;
     justify-content: space-between;
 
-    @include mobile {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-
-    @include tablet {
+    @include responsive(mobile, tablet) {
       flex-direction: column;
       align-items: flex-start;
     }
