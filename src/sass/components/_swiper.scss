@@ -14,38 +14,29 @@
 }
 
 // Стили для обёртки и слайдов
-  @include desktop {
+@include desktop {
   .swiper-wrapper {
     display: flex;
     gap: 48px;
-}
+  }
 
-.swiper-slide {
-  flex-shrink: 1;
-}
+  .swiper-slide {
+    flex-shrink: 1;
+  }
 
-.swiper-pagination,
-.swiper-button-prev,
-.swiper-button-next {
+  .swiper-pagination,
+  .swiper-button-prev,
+  .swiper-button-next {
     display: none !important;
   }
 }
 
 // Пагинация (общие стили)
 .swiper-pagination {
-  position: absolute;
-  bottom: -24px;
+  // position: absolute;
   display: flex;
   justify-content: center;
   gap: 10px;
-
-  @include mobile {
-    bottom: -33px !important;
-  }
-
-  @include tablet {
-    bottom: -33px !important;
-  }
 
   .swiper-pagination-bullet {
     width: 6px;
@@ -70,9 +61,9 @@
 // Стрелки для переключения слайдов
 .swiper-button-prev,
 .swiper-button-next {
-  position: absolute;
-  top: 113%;
-  transform: translateY(-50%);
+  // position: absolute;
+  // top: 113%;
+  // transform: translateY(-50%);
   z-index: 10;
   width: 24px;
   height: 24px;
@@ -83,11 +74,11 @@
   }
 
   &.swiper-button-prev {
-    left: 90px;
+    // left: 90px;
   }
 
   &.swiper-button-next {
-    right: 90px;
+    // right: 90px;
   }
 }
 
@@ -116,4 +107,10 @@
 .swiper-button-prev:after,
 .swiper-button-next:after {
   display: none;
+}
+
+.wrap-slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
