@@ -15,9 +15,6 @@
     padding: 15px 0;
 
     .element-number {
-      display: flex;
-      align-items: center;
-      justify-content: center;
       color: $accent-color;
       font-family: $psytype;
       font-size: 55px;
@@ -35,30 +32,9 @@
       @include mobile {
         font-size: 32px;
         letter-spacing: 0.32px;
+        width: 51px;
+        height: 51px;
       }
-
-      // &::after {
-      //   content: "";
-      //   position: absolute;
-      //   width: 71px;
-      //   height: 71px;
-      //   border-radius: 50%;
-      //   border: 1px solid $accent-color;
-      //   display: flex;
-      //   align-items: center;
-      //   justify-content: center;
-
-      //   @include mobile {
-      //     width: 51px;
-      //     height: 51px;
-      //   }
-      // }
-    }
-
-    span.element-number {
-      display: flex;
-      align-items: center;
-      justify-content: center;
     }
   }
 }
