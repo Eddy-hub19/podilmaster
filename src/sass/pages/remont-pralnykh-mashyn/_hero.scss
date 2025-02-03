@@ -45,10 +45,6 @@
     @include desktop {
       padding-right: 56px;
     }
-
-    // @include tablet {
-    //   margin-top: 60px;
-    // }
   }
 
   .hero-img {
@@ -196,7 +192,7 @@
   @include mobile {
     display: none;
   }
-  
+
   @include tablet {
     display: none;
   }

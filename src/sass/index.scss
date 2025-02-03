@@ -201,14 +201,16 @@ img {
     top: 0;
     left: 0;
     border-top-left-radius: 55px;
-    box-shadow: -1px -1px 0.5px $secondary-color;
+    // box-shadow: -1px -1px 0.5px $secondary-color;
   }
 
   &::after {
     bottom: 0;
     right: 0;
     border-bottom-right-radius: 55px;
-    box-shadow: 1px 1px 1px $secondary-color;
+    background-image: url("/src/images/TEST.svg");
+
+    // box-shadow: 1px 1px 1px $secondary-color;
   }
 }
 
