@@ -31,14 +31,13 @@
 .swiper-pagination {
   display: flex;
   justify-content: center;
-  gap: 10px;
 
   .swiper-pagination-bullet {
     width: 6px;
     height: 6px;
-    background-color: gray;
+    background-color: #3475ff;
     border-radius: 50%;
-    opacity: 0.5;
+    opacity: 1;
     transition:
       background-color 0.3s,
       opacity 0.3s;
@@ -47,10 +46,23 @@
       width: 19px;
       height: 6px;
       border-radius: 15px;
-      background: var(--2, $accent-color);
+      background: $accent-color;
       opacity: 1;
     }
   }
+}
+
+.custom-next,
+.custom-prev {
+  cursor: pointer;
+}
+
+.custom-next {
+  margin-left: 80px;
+}
+
+.custom-prev {
+  margin-right: 80px;
 }
 
 // Стрелки для переключения слайдов
@@ -61,18 +73,9 @@
   z-index: 10;
   width: 24px;
   height: 24px;
-  cursor: pointer;
 
   &::after {
     font-size: 16px;
-  }
-
-  &.swiper-button-prev {
-    left: 100px;
-  }
-
-  &.swiper-button-next {
-    right: 100px;
   }
 }
 
@@ -91,8 +94,9 @@
 .swiper-pagination-custom,
 .swiper-pagination-fraction {
   width: auto;
+  margin: 0 auto;
   left: 50%;
-  transform: translate(-50%, 50%);
+  transform: translate(-50%, 0%);
 
   @include desktop {
     display: none;
@@ -109,12 +113,7 @@
   align-items: center;
   justify-content: center;
   position: relative;
-  margin-top: 60px;
-
-  @include responsive(mobile, tablet) {
-    margin-top: 30px;
-    margin-bottom: 30px;
-  }
+  margin-top: 15px;
 
   img {
     display: block;

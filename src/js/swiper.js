@@ -38,8 +38,8 @@ function toggleSwiper() {
             clickable: true,
           },
           navigation: {
-            nextEl: `${slider.id} .swiper-button-next`,
-            prevEl: `${slider.id} .swiper-button-prev`,
+            nextEl: `${slider.id} .custom-next`,
+            prevEl: `${slider.id} .custom-prev`,
           },
         });
       }
