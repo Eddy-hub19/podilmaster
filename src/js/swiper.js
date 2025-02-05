@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   let swiper1 = null;
   let swiper2 = null;
   let swiper3 = null;

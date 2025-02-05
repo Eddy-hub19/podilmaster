@@ -49,7 +49,7 @@ body {
   padding-top: 120px;
 
   @include responsive(mobile, tablet) {
-    padding-top: 60px;
+    padding-top: 60px !important;
   }
 }
 

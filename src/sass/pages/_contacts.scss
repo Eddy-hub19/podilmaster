@@ -22,9 +22,14 @@
     }
 
     @include responsive(mobile, tablet) {
+      justify-content: center;
       flex-wrap: wrap;
       margin-top: 40px;
       gap: 20px;
+    }
+
+    @include tablet {
+      gap: 49px;
     }
   }
 
@@ -32,6 +37,11 @@
     margin-top: 30px;
     display: flex;
     justify-content: space-between;
+
+    @media (max-width: 320px) {
+      flex-direction: column;
+      gap: 20px;
+    }
   }
 
   .card {
@@ -48,8 +58,16 @@
 
     @include mobile {
       width: 343px;
-      height: 152px;
+      max-width: 100%;
+      min-height: 152px;
       padding: 20px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    @media (max-width: 320px) {
+      width: 100%;
+      height: auto;
     }
 
     .card-title {
@@ -73,6 +91,10 @@
       font-style: normal;
       font-weight: 400;
       line-height: normal;
+
+      @media (max-width: 320px) {
+        word-break: break-all;
+      }
     }
 
     img {
