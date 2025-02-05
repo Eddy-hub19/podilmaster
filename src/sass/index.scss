@@ -70,9 +70,7 @@ button {
   text-align: center;
 
   @include desktop {
-    background: #dadfdb22;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    background: #f8f8f8;
   }
 }
 
